@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GroupUp!</string>
+    <string name="register">Kaydol</string>
+    <string name="login">Giriş Yap</string>
+    <string name="email_error">Lütfen geçerli bir e-posta adresi girin.</string>
+    <string name="password_error">Şifre uzunluğu en az 6 karakter olmalıdır.</string>
+    <string name="email_hint">E-posta</string>
+    <string name="password_hint">Şifre</string>
+    <string name="email_in_use">Bu e-posta adresi zaten başka bir hesap tarafından kullanılıyor.</string>
+    <string name="already_have_account">Zaten hesabın var mı? Giriş yap.</string>
+    <string name="registering">Kaydolunuyor...</string>
+    <string name="not_have_account">Hesabınız yok mu? Kaydol.</string>
+    <string name="loggingin">Giriş yapılıyor...</string>
+    <string name="logout">Çıkış yap</string>
+    <string name="invalid_password">E-posta adresi veya şifre yanlış.</string>
+    <string name="forgot_password">Şifreni mi unuttun?</string>
+    <string name="trouble_logging_in">Giriş yaparken sorun mu yaşıyorsunuz?</string>
+    <string name="email_sent">E-posta yollandı.</string>
+    <string name="reset">Sıfırla</string>
+    <string name="pp_and_tos">Kayıt olarak, Gizlilik Politikası ve Hizmet Koşullarını kabul etmiş olursun.</string>
+    <string name="name_hint">İsim</string>
+    <string name="name_error">Lütfen isminizi girin.</string>
+    <string name="school_error">Lütfen okulunuzu seçin.</string>
+    <string name="department_error">Lütfen bölümünüzü seçin.</string>
+    <string name="school_hint">Üniversite</string>
+    <string name="department_hint">Bölüm</string>
+</resources>

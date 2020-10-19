@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "444998478116",
+    "firebase_url": "https://groupup-373fc.firebaseio.com",
+    "project_id": "groupup-373fc",
+    "storage_bucket": "groupup-373fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444998478116:android:c11f7520cfeeae13856bb1",
+        "android_client_info": {
+          "package_name": "com.emugamestudios.groupup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444998478116-c07nc5ph161q59hu79cmhhv4psapoocs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT-F15ttLfCQvgkJ0E0hHzUGWQ1FZPlHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444998478116-c07nc5ph161q59hu79cmhhv4psapoocs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

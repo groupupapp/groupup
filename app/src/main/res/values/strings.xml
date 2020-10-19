@@ -1,0 +1,779 @@
+<resources>
+    <string name="app_name">GroupUp!</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="email_error">Please enter a valid email address.</string>
+    <string name="password_error">Password length must be at least 6 characters.</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="email_in_use">This email address is already in use by another account.</string>
+    <string name="already_have_account">Already have an account? Login.</string>
+    <string name="registering">Registering...</string>
+    <string name="not_have_account">Not have an account? Register.</string>
+    <string name="loggingin">Logging in...</string>
+    <string name="logout">Logout</string>
+    <string name="invalid_password">The email address or password is incorrect.</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="trouble_logging_in">Trouble logging in?</string>
+    <string name="email_sent">Email sent.</string>
+    <string name="reset">Reset</string>
+    <string name="pp_and_tos">By registering, you agree to the Privacy Policy and Terms of Service.</string>
+
+
+    <string-array name="universityList">
+        <item VALUE="ABANT İZZET BAYSAL ÜNİVERSİTESİ">ABANT İZZET BAYSAL ÜNİVERSİTESİ</item>
+        <item VALUE="ABDULLAH GÜL ÜNİVERSİTESİ">ABDULLAH GÜL ÜNİVERSİTESİ</item>
+        <item VALUE="ACIBADEM ÜNİVERSİTESİ">ACIBADEM ÜNİVERSİTESİ</item>
+        <item VALUE="ADANA BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ">ADANA BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ</item>
+        <item VALUE="ADNAN MENDERES ÜNİVERSİTESİ">ADNAN MENDERES ÜNİVERSİTESİ</item>
+        <item VALUE="ADIYAMAN ÜNİVERSİTESİ">ADIYAMAN ÜNİVERSİTESİ</item>
+        <item VALUE="AFYON KOCATEPE ÜNİVERSİTESİ">AFYON KOCATEPE ÜNİVERSİTESİ</item>
+        <item VALUE="AHİ EVRAN ÜNİVERSİTESİ">AHİ EVRAN ÜNİVERSİTESİ</item>
+        <item VALUE="AKDENİZ ÜNİVERSİTESİ">AKDENİZ ÜNİVERSİTESİ</item>
+        <item VALUE="AKEV ÜNİVERSİTESİ">AKEV ÜNİVERSİTESİ</item>
+        <item VALUE="AKSARAY ÜNİVERSİTESİ">AKSARAY ÜNİVERSİTESİ</item>
+        <item VALUE="ALANYA ALAADDİN KEYKUBAT ÜNİVERSİTESİ">ALANYA ALAADDİN KEYKUBAT ÜNİVERSİTESİ</item>
+        <item VALUE="ALANYA HAMDULLAH EMİN PAŞA ÜNİVERSİTESİ">ALANYA HAMDULLAH EMİN PAŞA ÜNİVERSİTESİ</item>
+        <item VALUE="AMASYA ÜNİVERSİTESİ">AMASYA ÜNİVERSİTESİ</item>
+        <item VALUE="ANADOLU ÜNİVERSİTESİ">ANADOLU ÜNİVERSİTESİ</item>
+        <item VALUE="ANKA TEKNOLOJİ ÜNİVERSİTESİ">ANKA TEKNOLOJİ ÜNİVERSİTESİ</item>
+        <item VALUE="ANKARA SOSYAL BİLİMLER ÜNİVERSİTESİ">ANKARA SOSYAL BİLİMLER ÜNİVERSİTESİ</item>
+        <item VALUE="ANKARA ÜNİVERSİTESİ">ANKARA ÜNİVERSİTESİ</item>
+        <item VALUE="ARDAHAN ÜNİVERSİTESİ">ARDAHAN ÜNİVERSİTESİ</item>
+        <item VALUE="ARTVİN ÇORUH ÜNİVERSİTESİ">ARTVİN ÇORUH ÜNİVERSİTESİ</item>
+        <item VALUE="ATATÜRK ÜNİVERSİTESİ">ATATÜRK ÜNİVERSİTESİ</item>
+        <item VALUE="ATILIM ÜNİVERSİTESİ">ATILIM ÜNİVERSİTESİ</item>
+        <item VALUE="AVRASYA ÜNİVERSİTESİ">AVRASYA ÜNİVERSİTESİ</item>
+        <item VALUE="AĞRI İBRAHİM ÇEÇEN ÜNİVERSİTESİ">AĞRI İBRAHİM ÇEÇEN ÜNİVERSİTESİ</item>
+        <item VALUE="BAHÇEŞEHİR ÜNİVERSİTESİ">BAHÇEŞEHİR ÜNİVERSİTESİ</item>
+        <item VALUE="BALIKESİR ÜNİVERSİTESİ">BALIKESİR ÜNİVERSİTESİ</item>
+        <item VALUE="BANDIRMA ONYEDİ EYLÜL ÜNİVERSİTESİ">BANDIRMA ONYEDİ EYLÜL ÜNİVERSİTESİ</item>
+        <item VALUE="BARTIN ÜNİVERSİTESİ">BARTIN ÜNİVERSİTESİ</item>
+        <item VALUE="BATMAN ÜNİVERSİTESİ">BATMAN ÜNİVERSİTESİ</item>
+        <item VALUE="BAYBURT ÜNİVERSİTESİ">BAYBURT ÜNİVERSİTESİ</item>
+        <item VALUE="BAŞKENT ÜNİVERSİTESİ">BAŞKENT ÜNİVERSİTESİ</item>
+        <item VALUE="BEYKENT ÜNİVERSİTESİ">BEYKENT ÜNİVERSİTESİ</item>
+        <item VALUE="BEZMİÂLEM VAKIF ÜNİVERSİTESİ">BEZMİÂLEM VAKIF ÜNİVERSİTESİ</item>
+        <item VALUE="BİLECİK ŞEYH EDEBALİ ÜNİVERSİTESİ">BİLECİK ŞEYH EDEBALİ ÜNİVERSİTESİ</item>
+        <item VALUE="BİLKENT ÜNİVERSİTESİ">BİLKENT ÜNİVERSİTESİ</item>
+        <item VALUE="BİNGÖL ÜNİVERSİTESİ">BİNGÖL ÜNİVERSİTESİ</item>
+        <item VALUE="BİRUNİ ÜNİVERSİTESİ">BİRUNİ ÜNİVERSİTESİ</item>
+        <item VALUE="BİTLİS EREN ÜNİVERSİTESİ">BİTLİS EREN ÜNİVERSİTESİ</item>
+        <item VALUE="BOZOK ÜNİVERSİTESİ">BOZOK ÜNİVERSİTESİ</item>
+        <item VALUE="BOĞAZİÇİ ÜNİVERSİTESİ">BOĞAZİÇİ ÜNİVERSİTESİ</item>
+        <item VALUE="BURSA ORHANGAZİ ÜNİVERSİTESİ">BURSA ORHANGAZİ ÜNİVERSİTESİ</item>
+        <item VALUE="BURSA TEKNİK ÜNİVERSİTESİ">BURSA TEKNİK ÜNİVERSİTESİ</item>
+        <item VALUE="BÜLENT ECEVİT ÜNİVERSİTESİ">BÜLENT ECEVİT ÜNİVERSİTESİ</item>
+        <item VALUE="CANİK BAŞARI ÜNİVERSİTESİ">CANİK BAŞARI ÜNİVERSİTESİ</item>
+        <item VALUE="CELAL BAYAR ÜNİVERSİTESİ">CELAL BAYAR ÜNİVERSİTESİ</item>
+        <item VALUE="CUMHURİYET ÜNİVERSİTESİ">CUMHURİYET ÜNİVERSİTESİ</item>
+        <item VALUE="ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ">ÇANAKKALE ONSEKİZ MART ÜNİVERSİTESİ</item>
+        <item VALUE="ÇANKAYA ÜNİVERSİTESİ">ÇANKAYA ÜNİVERSİTESİ</item>
+        <item VALUE="ÇANKIRI KARATEKİN ÜNİVERSİTESİ">ÇANKIRI KARATEKİN ÜNİVERSİTESİ</item>
+        <item VALUE="ÇAĞ ÜNİVERSİTESİ">ÇAĞ ÜNİVERSİTESİ</item>
+        <item VALUE="ÇUKUROVA ÜNİVERSİTESİ">ÇUKUROVA ÜNİVERSİTESİ</item>
+        <item VALUE="DENİZ HARP OKULU">DENİZ HARP OKULU</item>
+        <item VALUE="DİCLE ÜNİVERSİTESİ">DİCLE ÜNİVERSİTESİ</item>
+        <item VALUE="DOKUZ EYLÜL ÜNİVERSİTESİ">DOKUZ EYLÜL ÜNİVERSİTESİ</item>
+        <item VALUE="DOĞUŞ ÜNİVERSİTESİ">DOĞUŞ ÜNİVERSİTESİ</item>
+        <item VALUE="DUMLUPINAR ÜNİVERSİTESİ">DUMLUPINAR ÜNİVERSİTESİ</item>
+        <item VALUE="DÜZCE ÜNİVERSİTESİ">DÜZCE ÜNİVERSİTESİ</item>
+        <item VALUE="EGE ÜNİVERSİTESİ">EGE ÜNİVERSİTESİ</item>
+        <item VALUE="ERCİYES ÜNİVERSİTESİ">ERCİYES ÜNİVERSİTESİ</item>
+        <item VALUE="ERZİNCAN ÜNİVERSİTESİ">ERZİNCAN ÜNİVERSİTESİ</item>
+        <item VALUE="ERZURUM TEKNİK ÜNİVERSİTESİ">ERZURUM TEKNİK ÜNİVERSİTESİ</item>
+        <item VALUE="ESKİŞEHİR OSMANGAZİ ÜNİVERSİTESİ">ESKİŞEHİR OSMANGAZİ ÜNİVERSİTESİ</item>
+        <item VALUE="FATİH SULTAN MEHMET ÜNİVERSİTESİ">FATİH SULTAN MEHMET ÜNİVERSİTESİ</item>
+        <item VALUE="FATİH ÜNİVERSİTESİ">FATİH ÜNİVERSİTESİ</item>
+        <item VALUE="FIRAT ÜNİVERSİTESİ">FIRAT ÜNİVERSİTESİ</item>
+        <item VALUE="GALATASARAY ÜNİVERSİTESİ">GALATASARAY ÜNİVERSİTESİ</item>
+        <item VALUE="GAZİ ÜNİVERSİTESİ">GAZİ ÜNİVERSİTESİ</item>
+        <item VALUE="GAZİANTEP ÜNİVERSİTESİ">GAZİANTEP ÜNİVERSİTESİ</item>
+        <item VALUE="GAZİOSMANPAŞA ÜNİVERSİTESİ">GAZİOSMANPAŞA ÜNİVERSİTESİ</item>
+        <item VALUE="GEBZE TEKNİK ÜNİVERSİTESİ">GEBZE TEKNİK ÜNİVERSİTESİ</item>
+        <item VALUE="GEDİK ÜNİVERSİTESİ">GEDİK ÜNİVERSİTESİ</item>
+        <item VALUE="GEDİZ ÜNİVERSİTESİ">GEDİZ ÜNİVERSİTESİ</item>
+        <item VALUE="GİRESUN ÜNİVERSİTESİ">GİRESUN ÜNİVERSİTESİ</item>
+        <item VALUE="GÜLHANE ASKERİ TIP AKADEMİSİ">GÜLHANE ASKERİ TIP AKADEMİSİ</item>
+        <item VALUE="GÜMÜŞHANE ÜNİVERSİTESİ">GÜMÜŞHANE ÜNİVERSİTESİ</item>
+        <item VALUE="HACETTEPE ÜNİVERSİTESİ">HACETTEPE ÜNİVERSİTESİ</item>
+        <item VALUE="HAKKARİ ÜNİVERSİTESİ">HAKKARİ ÜNİVERSİTESİ</item>
+        <item VALUE="HALİÇ ÜNİVERSİTESİ">HALİÇ ÜNİVERSİTESİ</item>
+        <item VALUE="HARRAN ÜNİVERSİTESİ">HARRAN ÜNİVERSİTESİ</item>
+        <item VALUE="HASAN KALYONCU ÜNİVERSİTESİ">HASAN KALYONCU ÜNİVERSİTESİ</item>
+        <item VALUE="HAVA HARP OKULU">HAVA HARP OKULU</item>
+        <item VALUE="HİTİT ÜNİVERSİTESİ">HİTİT ÜNİVERSİTESİ</item>
+        <item VALUE="IĞDIR ÜNİVERSİTESİ">IĞDIR ÜNİVERSİTESİ</item>
+        <item VALUE="IŞIK ÜNİVERSİTESİ">IŞIK ÜNİVERSİTESİ</item>
+        <item VALUE="KADİR HAS ÜNİVERSİTESİ">KADİR HAS ÜNİVERSİTESİ</item>
+        <item VALUE="KAFKAS ÜNİVERSİTESİ">KAFKAS ÜNİVERSİTESİ</item>
+        <item VALUE="KAHRAMANMARAŞ SÜTÇÜ İMAM ÜNİVERSİTESİ">KAHRAMANMARAŞ SÜTÇÜ İMAM ÜNİVERSİTESİ</item>
+        <item VALUE="KANUNİ ÜNİVERSİTESİ">KANUNİ ÜNİVERSİTESİ</item>
+        <item VALUE="KARA HARP OKULU">KARA HARP OKULU</item>
+        <item VALUE="KARABÜK ÜNİVERSİTESİ">KARABÜK ÜNİVERSİTESİ</item>
+        <item VALUE="KARADENİZ TEKNİK ÜNİVERSİTESİ">KARADENİZ TEKNİK ÜNİVERSİTESİ</item>
+        <item VALUE="KARAMANOĞLU MEHMETBEY ÜNİVERSİTESİ">KARAMANOĞLU MEHMETBEY ÜNİVERSİTESİ</item>
+        <item VALUE="KARATAY ÜNİVERSİTESİ">KARATAY ÜNİVERSİTESİ</item>
+        <item VALUE="KASTAMONU ÜNİVERSİTESİ">KASTAMONU ÜNİVERSİTESİ</item>
+        <item VALUE="KİLİS 7 ARALIK ÜNİVERSİTESİ">KİLİS 7 ARALIK ÜNİVERSİTESİ</item>
+        <item VALUE="KOCAELİ ÜNİVERSİTESİ">KOCAELİ ÜNİVERSİTESİ</item>
+        <item VALUE="KONYA GIDA TARIM ÜNİVERSİTESİ">KONYA GIDA TARIM ÜNİVERSİTESİ</item>
+        <item VALUE="KOÇ ÜNİVERSİTESİ">KOÇ ÜNİVERSİTESİ</item>
+        <item VALUE="KIRKLARELİ ÜNİVERSİTESİ">KIRKLARELİ ÜNİVERSİTESİ</item>
+        <item VALUE="KIRIKKALE ÜNİVERSİTESİ">KIRIKKALE ÜNİVERSİTESİ</item>
+        <item VALUE="MEF ÜNİVERSİTESİ">MEF ÜNİVERSİTESİ</item>
+        <item VALUE="MALTEPE ÜNİVERSİTESİ">MALTEPE ÜNİVERSİTESİ</item>
+        <item VALUE="MARDİN ARTUKLU ÜNİVERSİTESİ">MARDİN ARTUKLU ÜNİVERSİTESİ</item>
+        <item VALUE="MARMARA ÜNİVERSİTESİ">MARMARA ÜNİVERSİTESİ</item>
+        <item VALUE="MEHMET AKİF ERSOY ÜNİVERSİTESİ">MEHMET AKİF ERSOY ÜNİVERSİTESİ</item>
+        <item VALUE="MELİKŞAH ÜNİVERSİTESİ">MELİKŞAH ÜNİVERSİTESİ</item>
+        <item VALUE="MERSİN ÜNİVERSİTESİ">MERSİN ÜNİVERSİTESİ</item>
+        <item VALUE="MEVLANA ÜNİVERSİTESİ">MEVLANA ÜNİVERSİTESİ</item>
+        <item VALUE="MİMAR SİNAN GÜZEL SANATLAR ÜNİVERSİTESİ">MİMAR SİNAN GÜZEL SANATLAR ÜNİVERSİTESİ</item>
+        <item VALUE="MURAT HÜDAVENDİGAR ÜNİVERSİTESİ">MURAT HÜDAVENDİGAR ÜNİVERSİTESİ</item>
+        <item VALUE="MUSTAFA KEMAL ÜNİVERSİTESİ">MUSTAFA KEMAL ÜNİVERSİTESİ</item>
+        <item VALUE="MUĞLA SITKI KOÇMAN ÜNİVERSİTESİ">MUĞLA SITKI KOÇMAN ÜNİVERSİTESİ</item>
+        <item VALUE="MUŞ ALPARSLAN ÜNİVERSİTESİ">MUŞ ALPARSLAN ÜNİVERSİTESİ</item>
+        <item VALUE="NAMIK KEMAL ÜNİVERSİTESİ">NAMIK KEMAL ÜNİVERSİTESİ</item>
+        <item VALUE="NECMETTİN ERBAKAN ÜNİVERSİTESİ**">NECMETTİN ERBAKAN ÜNİVERSİTESİ**</item>
+        <item VALUE="NEVŞEHİR HACI BEKTAŞ VELİ ÜNİVERSİTESİ">NEVŞEHİR HACI BEKTAŞ VELİ ÜNİVERSİTESİ</item>
+        <item VALUE="NİĞDE ÜNİVERSİTESİ">NİĞDE ÜNİVERSİTESİ</item>
+        <item VALUE="NİŞANTAŞI ÜNİVERSİTESİ">NİŞANTAŞI ÜNİVERSİTESİ</item>
+        <item VALUE="NUH NACİ YAZGAN ÜNİVERSİTESİ">NUH NACİ YAZGAN ÜNİVERSİTESİ</item>
+        <item VALUE="İBN-U HALDUN ÜNİVERSİTESİ">İBN-U HALDUN ÜNİVERSİTESİ</item>
+        <item VALUE="İNÖNÜ ÜNİVERSİTESİ">İNÖNÜ ÜNİVERSİTESİ</item>
+        <item VALUE="İPEK ÜNİVERSİTESİ**">İPEK ÜNİVERSİTESİ**</item>
+        <item VALUE="İSKENDERUN TEKNİK ÜNİVERSİTESİ">İSKENDERUN TEKNİK ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL 29 MAYIS ÜNİVERSİTESİ">İSTANBUL 29 MAYIS ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL AREL ÜNİVERSİTESİ">İSTANBUL AREL ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL AYDIN ÜNİVERSİTESİ">İSTANBUL AYDIN ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL BİLGİ ÜNİVERSİTESİ">İSTANBUL BİLGİ ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL BİLİM ÜNİVERSİTESİ">İSTANBUL BİLİM ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL ESENYURT ÜNİVERSİTESİ">İSTANBUL ESENYURT ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL GELİŞİM ÜNİVERSİTESİ">İSTANBUL GELİŞİM ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL KEMERBURGAZ ÜNİVERSİTESİ">İSTANBUL KEMERBURGAZ ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL KÜLTÜR ÜNİVERSİTESİ">İSTANBUL KÜLTÜR ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL MEDENİYET ÜNİVERSİTESİ">İSTANBUL MEDENİYET ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL MEDİPOL ÜNİVERSİTESİ">İSTANBUL MEDİPOL ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL RUMELİ ÜNİVERSİTESİ">İSTANBUL RUMELİ ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL SABAHATTİN ZAİM ÜNİVERSİTESİ">İSTANBUL SABAHATTİN ZAİM ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL TEKNİK ÜNİVERSİTESİ">İSTANBUL TEKNİK ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL TİCARET ÜNİVERSİTESİ">İSTANBUL TİCARET ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL ÜNİVERSİTESİ">İSTANBUL ÜNİVERSİTESİ</item>
+        <item VALUE="İSTANBUL ŞEHİR ÜNİVERSİTESİ">İSTANBUL ŞEHİR ÜNİVERSİTESİ</item>
+        <item VALUE="İSTİNYE ÜNİVERSİTESİ">İSTİNYE ÜNİVERSİTESİ</item>
+        <item VALUE="İZMİR EKONOMİ ÜNİVERSİTESİ">İZMİR EKONOMİ ÜNİVERSİTESİ</item>
+        <item VALUE="İZMİR KÂTİP ÇELEBİ ÜNİVERSİTESİ">İZMİR KÂTİP ÇELEBİ ÜNİVERSİTESİ</item>
+        <item VALUE="İZMİR YÜKSEK TEKNOLOJİ ENSTİTÜSÜ">İZMİR YÜKSEK TEKNOLOJİ ENSTİTÜSÜ</item>
+        <item VALUE="İZMİR ÜNİVERSİTESİ">İZMİR ÜNİVERSİTESİ</item>
+        <item VALUE="OKAN ÜNİVERSİTESİ">OKAN ÜNİVERSİTESİ</item>
+        <item VALUE="ONDOKUZ MAYIS ÜNİVERSİTESİ">ONDOKUZ MAYIS ÜNİVERSİTESİ</item>
+        <item VALUE="ORDU ÜNİVERSİTESİ">ORDU ÜNİVERSİTESİ</item>
+        <item VALUE="ORTA DOĞU TEKNİK ÜNİVERSİTESİ">ORTA DOĞU TEKNİK ÜNİVERSİTESİ</item>
+        <item VALUE="OSMANİYE KORKUT ATA ÜNİVERSİTESİ">OSMANİYE KORKUT ATA ÜNİVERSİTESİ</item>
+        <item VALUE="ÖZYEĞİN ÜNİVERSİTESİ">ÖZYEĞİN ÜNİVERSİTESİ</item>
+        <item VALUE="PAMUKKALE ÜNİVERSİTESİ">PAMUKKALE ÜNİVERSİTESİ</item>
+        <item VALUE="PİRİ REİS ÜNİVERSİTESİ">PİRİ REİS ÜNİVERSİTESİ</item>
+        <item VALUE="POLİS AKADEMİSİ">POLİS AKADEMİSİ</item>
+        <item VALUE="RECEP TAYYİP ERDOĞAN ÜNİVERSİTESİ">RECEP TAYYİP ERDOĞAN ÜNİVERSİTESİ</item>
+        <item VALUE="SABANCI ÜNİVERSİTESİ">SABANCI ÜNİVERSİTESİ</item>
+        <item VALUE="SAKARYA ÜNİVERSİTESİ">SAKARYA ÜNİVERSİTESİ</item>
+        <item VALUE="SANKO ÜNİVERSİTESİ">SANKO ÜNİVERSİTESİ</item>
+        <item VALUE="SAĞLIK BİLİMLERİ ÜNİVERSİTESİ">SAĞLIK BİLİMLERİ ÜNİVERSİTESİ</item>
+        <item VALUE="SELAHATTİN EYYUBİ ÜNİVERSİTESİ">SELAHATTİN EYYUBİ ÜNİVERSİTESİ</item>
+        <item VALUE="SELÇUK ÜNİVERSİTESİ">SELÇUK ÜNİVERSİTESİ</item>
+        <item VALUE="SİİRT ÜNİVERSİTESİ">SİİRT ÜNİVERSİTESİ</item>
+        <item VALUE="SİNOP ÜNİVERSİTESİ">SİNOP ÜNİVERSİTESİ</item>
+        <item VALUE="SÜLEYMAN DEMİREL ÜNİVERSİTESİ">SÜLEYMAN DEMİREL ÜNİVERSİTESİ</item>
+        <item VALUE="SÜLEYMAN ŞAH ÜNİVERSİTESİ">SÜLEYMAN ŞAH ÜNİVERSİTESİ</item>
+        <item VALUE="ŞİFA ÜNİVERSİTESİ">ŞİFA ÜNİVERSİTESİ</item>
+        <item VALUE="ŞIRNAK ÜNİVERSİTESİ">ŞIRNAK ÜNİVERSİTESİ</item>
+        <item VALUE="TED ÜNİVERSİTESİ">TED ÜNİVERSİTESİ</item>
+        <item VALUE="TOBB EKONOMİ VE TEKNOLOJİ ÜNİVERSİTESİ">TOBB EKONOMİ VE TEKNOLOJİ ÜNİVERSİTESİ</item>
+        <item VALUE="TOROS ÜNİVERSİTESİ">TOROS ÜNİVERSİTESİ</item>
+        <item VALUE="TRAKYA ÜNİVERSİTESİ">TRAKYA ÜNİVERSİTESİ</item>
+        <item VALUE="TUNCELİ ÜNİVERSİTESİ">TUNCELİ ÜNİVERSİTESİ</item>
+        <item VALUE="TURGUT ÖZAL ÜNİVERSİTESİ">TURGUT ÖZAL ÜNİVERSİTESİ</item>
+        <item VALUE="TÜRK ALMAN ÜNİVERSİTESİ">TÜRK ALMAN ÜNİVERSİTESİ</item>
+        <item VALUE="TÜRK HAVA KURUMU ÜNİVERSİTESİ">TÜRK HAVA KURUMU ÜNİVERSİTESİ</item>
+        <item VALUE="TÜRKİYE ULUSLARARASI İSLAM, BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ">TÜRKİYE ULUSLARARASI İSLAM, BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ</item>
+        <item VALUE="UFUK ÜNİVERSİTESİ">UFUK ÜNİVERSİTESİ</item>
+        <item VALUE="ULUDAĞ ÜNİVERSİTESİ">ULUDAĞ ÜNİVERSİTESİ</item>
+        <item VALUE="ULUSLARARASI ANTALYA ÜNİVERSİTESİ">ULUSLARARASI ANTALYA ÜNİVERSİTESİ</item>
+        <item VALUE="UŞAK ÜNİVERSİTESİ">UŞAK ÜNİVERSİTESİ</item>
+        <item VALUE="ÜSKÜDAR ÜNİVERSİTESİ">ÜSKÜDAR ÜNİVERSİTESİ</item>
+        <item VALUE="YALOVA ÜNİVERSİTESİ">YALOVA ÜNİVERSİTESİ</item>
+        <item VALUE="YAŞAR ÜNİVERSİTESİ">YAŞAR ÜNİVERSİTESİ</item>
+        <item VALUE="YEDİTEPE ÜNİVERSİTESİ">YEDİTEPE ÜNİVERSİTESİ</item>
+        <item VALUE="YENİ YÜZYIL ÜNİVERSİTESİ">YENİ YÜZYIL ÜNİVERSİTESİ</item>
+        <item VALUE="YÜKSEK İHTİSAS ÜNİVERSİTESİ**">YÜKSEK İHTİSAS ÜNİVERSİTESİ**</item>
+        <item VALUE="YÜZÜNCÜ YIL ÜNİVERSİTESİ">YÜZÜNCÜ YIL ÜNİVERSİTESİ</item>
+        <item VALUE="YILDIRIM BEYAZIT ÜNİVERSİTESİ">YILDIRIM BEYAZIT ÜNİVERSİTESİ</item>
+        <item VALUE="YILDIZ TEKNİK ÜNİVERSİTESİ">YILDIZ TEKNİK ÜNİVERSİTESİ</item>
+        <item VALUE="ZİRVE ÜNİVERSİTESİ">ZİRVE ÜNİVERSİTESİ</item>
+    </string-array>
+
+
+    <string-array name="department">
+        <item>ACİL YARDIM VE AFET YÖNETİMİ (FAKÜLTE)</item>
+        <item>ACİL YARDIM VE AFET YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>ADLİ BİLİMLER</item>
+        <item>ADLİ BİLİŞİM MÜHENDİSLİĞİ </item>
+        <item>ADLİ BİLİŞİM MÜHENDİSLİĞİ (M.T.O.K.) </item>
+        <item>AĞAÇ İŞLERİ ENDÜSTRİ MÜHENDİSLİĞİ</item>
+        <item>AİLE VE TÜKETİCİ BİLİMLERİ</item>
+        <item>AKTÜERYA (FAKÜLTE)</item>
+        <item>AKTÜERYA (YÜKSEKOKUL)</item>
+        <item>AKTÜERYA BİLİMLERİ</item>
+        <item>AKTÜERYA VE RİSK YÖNETİMİ</item>
+        <item>ALMAN DİLİ VE EDEBİYATI</item>
+        <item>ALMANCA ÖĞRETMENLİĞİ</item>
+        <item>AMERİKAN KÜLTÜRÜ VE EDEBİYATI</item>
+        <item>ANİMASYON VE OYUN TASARIMI</item>
+        <item>ANTRENÖRLÜK EĞİTİMİ (FAKÜLTE)</item>
+        <item>ANTRENÖRLÜK EĞİTİMİ (YÜKSEKOKUL)   </item>
+        <item>ANTROPOLOJİ</item>
+        <item>ARAP DİLİ VE EDEBİYATI</item>
+        <item>ARAPÇA ÖĞRETMENLİĞİ</item>
+        <item>ARKEOLOJİ VE SANAT TARİHİ </item>
+        <item>ARKEOLOJİ  </item>
+        <item>ARNAVUT DİLİ VE EDEBİYATI</item>
+        <item>ASTRONOMİ VE UZAY BİLİMLERİ</item>
+        <item>AVRUPA BİRLİĞİ İLİŞKİLERİ</item>
+        <item>AZERBAYCAN DİLİ ÖĞRETMENLİĞİ</item>
+        <item>AZERBAYCAN DİLİ VE EDEBİYATI  </item>
+        <item>AZERBAYCAN DİLİ VE EDEBİYATI ÖĞRETMENLİĞİ</item>
+        <item>AZERBAYCAN TÜRKÇESİ VE EDEBİYATI  </item>
+        <item>BAHÇE BİTKİLERİ</item>
+        <item>BAHÇE BİTKİLERİ ÜRETİMİ VE PAZARLAMASI </item>
+        <item>BAHÇE VE TARLA BİTKİLERİ</item>
+        <item>BALIKÇILIK TEKNOLOJİSİ (FAKÜLTE)</item>
+        <item>BALIKÇILIK TEKNOLOJİSİ (YÜKSEKOKUL)  </item>
+        <item>BALIKÇILIK TEKNOLOJİSİ MÜHENDİSLİĞİ   </item>
+        <item>BANKACILIK (YÜKSEKOKUL)   </item>
+        <item>BANKACILIK VE FİNANS (FAKÜLTE)  </item>
+        <item>BANKACILIK VE FİNANS (YÜKSEKOKUL)</item>
+        <item>BANKACILIK VE FİNANSMAN (YÜKSEKOKUL) </item>
+        <item>BANKACILIK VE SİGORTACILIK (FAKÜLTE)</item>
+        <item>BANKACILIK VE SİGORTACILIK (YÜKSEKOKUL) </item>
+        <item>BASIM TEKNOLOJİLERİ (YÜKSEKOKUL)</item>
+        <item>BASIM YAYIN VE REDAKTE</item>
+        <item>BASIN VE YAYIN</item>
+        <item>BATI DİLLERİ</item>
+        <item>BEDEN EĞİTİMİ VE SPOR ÖĞRETMENLİĞİ</item>
+        <item>BESLENME VE DİYETETİK (FAKÜLTE)</item>
+        <item>BESLENME VE DİYETETİK (YÜKSEKOKUL)</item>
+        <item>BİLGİ VE BELGE YÖNETİMİ</item>
+        <item>BİLGİSAYAR BİLİMLERİ</item>
+        <item>BİLGİSAYAR MÜHENDİSLİĞİ</item>
+        <item>BİLGİSAYAR MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>BİLGİSAYAR TEKNOLOJİSİ VE BİLİŞİM SİSTEMLERİ (YÜKSEKOKUL)</item>
+        <item>BİLGİSAYAR VE ÖĞRETİM TEKNOLOJİLERİ ÖĞRETMENLİĞİ</item>
+        <item>BİLGİSAYAR VE YAZILIM MÜHENDİSLİĞİ</item>
+        <item>BİLGİSAYAR-ENFORMATİK</item>
+        <item>BİLİM TARİHİ</item>
+        <item>BİLİŞİM SİSTEMLERİ MÜHENDİSLİĞİ</item>
+        <item>BİLİŞİM SİSTEMLERİ MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>BİLİŞİM SİSTEMLERİ VE TEKNOLOJİLERİ (FAKÜLTE)</item>
+        <item>BİTKİ KORUMA</item>
+        <item>BİTKİSEL ÜRETİM VE TEKNOLOJİLERİ</item>
+        <item>BİYOENFORMATİK VE GENETİK</item>
+        <item>BİYOKİMYA</item>
+        <item>BİYOLOJİ ÖĞRETMENLİĞİ</item>
+        <item>BİYOLOJİ</item>
+        <item>BİYOMEDİKAL MÜHENDİSLİĞİ</item>
+        <item>BİYOMEDİKAL MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>BİYOMÜHENDİSLİK</item>
+        <item>BİYOSİSTEM MÜHENDİSLİĞİ</item>
+        <item>BİYOTEKNOLOJİ VE MOLEKÜLER BİYOLOJİ</item>
+        <item>BİYOTEKNOLOJİ</item>
+        <item>BOŞNAK DİLİ VE EDEBİYATI</item>
+        <item>BULGAR DİLİ VE EDEBİYATI</item>
+        <item>ÇAĞDAŞ TÜRK LEHÇELERİ VE EDEBİYATLARI</item>
+        <item>ÇAĞDAŞ YUNAN DİLİ VE EDEBİYATI</item>
+        <item>ÇALIŞMA EKONOMİSİ VE ENDÜSTRİ İLİŞKİLERİ</item>
+        <item>ÇALIŞMA EKONOMİSİ VE ENDÜSTRİ İLİŞKİLERİ (AÇIKÖĞRETİM)</item>
+        <item>CANLANDIRMA FİLMİ TASARIM VE YÖNETİMİ</item>
+        <item>ÇERKEZ DİLİ VE EDEBİYATI</item>
+        <item>CEVHER HAZIRLAMA MÜHENDİSLİĞİ</item>
+        <item>ÇEVİRİBİLİM</item>
+        <item>ÇEVRE MÜHENDİSLİĞİ</item>
+        <item>ÇİN DİLİ VE EDEBİYATI</item>
+        <item>ÇİZGİ FİLM VE ANİMASYON</item>
+        <item>ÇOCUK GELİŞİMİ (FAKÜLTE)</item>
+        <item>ÇOCUK GELİŞİMİ (YÜKSEKOKUL)</item>
+        <item>COĞRAFYA (AÇIKÖĞRETİM)</item>
+        <item>COĞRAFYA ÖĞRETMENLİĞİ</item>
+        <item>COĞRAFYA</item>
+        <item>DENİZ İŞLETMECİLİĞİ VE YÖNETİMİ</item>
+        <item>DENİZ ULAŞTIRMA İŞLETME MÜHENDİSLİĞİ (FAKÜLTE)</item>
+        <item>DENİZ ULAŞTIRMA İŞLETME MÜHENDİSLİĞİ (YÜKSEKOKUL)</item>
+        <item>DENİZCİLİK İŞLETMELERİ YÖNETİMİ (FAKÜLTE)</item>
+        <item>DERİ MÜHENDİSLİĞİ</item>
+        <item>DİJİTAL OYUN TASARIMI (FAKÜLTE)</item>
+        <item>DİJİTAL OYUN TASARIMI (YÜKSEKOKUL)</item>
+        <item>DİL VE KONUŞMA TERAPİSİ</item>
+        <item>DİLBİLİM</item>
+        <item>DİLBİLİMİ</item>
+        <item>DİŞ HEKİMLİĞİ</item>
+        <item>DOĞU DİLLERİ</item>
+        <item>EBELİK (FAKÜLTE)</item>
+        <item>EBELİK (YÜKSEKOKUL)</item>
+        <item>ECZACILIK</item>
+        <item>EKONOMETRİ</item>
+        <item>EKONOMİ VE FİNANS</item>
+        <item>EKONOMİ</item>
+        <item>EL SANATLARI (M.T.O.K.)</item>
+        <item>EL SANATLARI TASARIMI VE ÜRETİMİ</item>
+        <item>ELEKTRİK MÜHENDİSLİĞİ</item>
+        <item>ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ</item>
+        <item>ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>ELEKTRONİK MÜHENDİSLİĞİ</item>
+        <item>ELEKTRONİK TİCARET VE TEKNOLOJİ YÖNETİMİ</item>
+        <item>ELEKTRONİK VE HABERLEŞME MÜHENDİSLİĞİ</item>
+        <item>ENDÜSTRİ MÜHENDİSLİĞİ</item>
+        <item>ENDÜSTRİ MÜHENDİSLİĞİ PROGRAMLARI</item>
+        <item>ENDÜSTRİ TASARIMI</item>
+        <item>ENDÜSTRİ ÜRÜNLERİ TASARIMI (FAKÜLTE)</item>
+        <item>ENDÜSTRİ ÜRÜNLERİ TASARIMI (YÜKSEKOKUL)</item>
+        <item>ENDÜSTRİ VE SİSTEM MÜHENDİSLİĞİ</item>
+        <item>ENDÜSTRİYEL TASARIM</item>
+        <item>ENDÜSTRİYEL TASARIM MÜHENDİSLİĞİ</item>
+        <item>ENDÜSTRİYEL TASARIM MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>ENERJİ MÜHENDİSLİĞİ</item>
+        <item>ENERJİ SİSTEMLERİ MÜHENDİSLİĞİ</item>
+        <item>ENERJİ SİSTEMLERİ MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>ENERJİ VE MALZEME MÜHENDİSLİĞİ</item>
+        <item>ENERJİ YÖNETİMİ</item>
+        <item>ERGOTERAPİ (FAKÜLTE)</item>
+        <item>ERGOTERAPİ (YÜKSEKOKUL)</item>
+        <item>ERMENİ DİLİ VE EDEBİYATI</item>
+        <item>EŞİT AĞIRLIKLI PROGRAMLAR</item>
+        <item>ESKİ YUNAN DİLİ VE EDEBİYATI</item>
+        <item>FARS DİLİ VE EDEBİYATI</item>
+        <item>FELSEFE (AÇIKÖĞRETİM)</item>
+        <item>FELSEFE GRUBU ÖĞRETMENLİĞİ</item>
+        <item>FELSEFE</item>
+        <item>FEN BİLGİSİ ÖĞRETMENLİĞİ</item>
+        <item>FİLM TASARIM VE YAZARLIK</item>
+        <item>FİLM TASARIM VE YÖNETMENLİĞİ</item>
+        <item>FİLM TASARIMI</item>
+        <item>FİNANS VE BANKACILIK (FAKÜLTE)</item>
+        <item>FİNANSAL EKONOMETRİ</item>
+        <item>FİZİK MÜHENDİSLİĞİ</item>
+        <item>FİZİK ÖĞRETMENLİĞİ</item>
+        <item>FİZİK</item>
+        <item>FİZYOTERAPİ VE REHABİLİTASYON (FAKÜLTE)</item>
+        <item>FİZYOTERAPİ VE REHABİLİTASYON (YÜKSEKOKUL)</item>
+        <item>FOTOĞRAF VE VİDEO</item>
+        <item>FOTOĞRAF</item>
+        <item>FRANSIZ DİLİ VE EDEBİYATI</item>
+        <item>FRANSIZCA ÖĞRETMENLİĞİ</item>
+        <item>GASTRONOMİ (FAKÜLTE)</item>
+        <item>GASTRONOMİ (YÜKSEKOKUL)</item>
+        <item>GASTRONOMİ VE MUTFAK SANATLARI</item>
+        <item>GASTRONOMİ VE MUTFAK SANATLARI (FAKÜLTE)</item>
+        <item>GASTRONOMİ VE MUTFAK SANATLARI (M.T.O.K.)</item>
+        <item>GASTRONOMİ VE MUTFAK SANATLARI (YÜKSEKOKUL)</item>
+        <item>GAYRİMENKUL GELİŞTİRME VE YÖNETİMİ (FAKÜLTE)</item>
+        <item>GAYRİMENKUL GELİŞTİRME VE YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>GAYRİMENKUL VE VARLIK DEĞERLEME (FAKÜLTE)</item>
+        <item>GAYRİMENKUL VE VARLIK DEĞERLEME (YÜKSEKOKUL)</item>
+        <item>GAZETECİLİK VE KİTLE İLETİŞİM</item>
+        <item>GAZETECİLİK</item>
+        <item>GELENEKSEL TÜRK SANATLARI (M.T.O.K.)</item>
+        <item>GEMİ İNŞAATI VE GEMİ MAKİNELERİ MÜHENDİSLİĞİ</item>
+        <item>GEMİ MAKİNELERİ İŞLETME MÜHENDİSLİĞİ (FAKÜLTE)</item>
+        <item>GEMİ MAKİNELERİ İŞLETME MÜHENDİSLİĞİ (YÜKSEKOKUL)</item>
+        <item>GEMİ VE DENİZ TEKNOLOJİSİ MÜHENDİSLİĞİ</item>
+        <item>GEMİ VE YAT TASARIMI</item>
+        <item>GENETİK VE BİYOMÜHENDİSLİK</item>
+        <item>GENETİK VE YAŞAM BİLİMLERİ PROGRAMLARI</item>
+        <item>GEOMATİK MÜHENDİSLİĞİ</item>
+        <item>GERONTOLOJİ</item>
+        <item>GIDA MÜHENDİSLİĞİ</item>
+        <item>GIDA TEKNOLOJİSİ (YÜKSEKOKUL)</item>
+        <item>GİRİŞİMCİLİK</item>
+        <item>GÖRSEL İLETİŞİM</item>
+        <item>GÖRSEL İLETİŞİM TASARIMI</item>
+        <item>GÖRSEL SANATLAR</item>
+        <item>GÖRSEL SANATLAR (M.T.O.K.)</item>
+        <item>GÖRSEL SANATLAR VE GÖRSEL İLETİŞİM TASARIMI</item>
+        <item>GÖRSEL SANATLAR VE İLETİŞİM TASARIMI</item>
+        <item>GÖRSEL SANATLAR VE MEDYA</item>
+        <item>GRAFİK TASARIM</item>
+        <item>GRAFİK TASARIMI</item>
+        <item>GRAFİK TASARIMI (M.T.O.K.)</item>
+        <item>GÜMRÜK İŞLETME (YÜKSEKOKUL)</item>
+        <item>GÜRCÜ DİLİ VE EDEBİYATI</item>
+        <item>GÜVERTE (YÜKSEKOKUL)</item>
+        <item>HALKBİLİM</item>
+        <item>HALKLA İLİŞKİLER</item>
+        <item>HALKLA İLİŞKİLER VE REKLAMCILIK (AÇIKÖĞRETİM)</item>
+        <item>HALKLA İLİŞKİLER VE REKLAMCILIK (FAKÜLTE)</item>
+        <item>HALKLA İLİŞKİLER VE REKLAMCILIK (YÜKSEKOKUL)</item>
+        <item>HALKLA İLİŞKİLER VE TANITIM</item>
+        <item>HALKLA İLİŞKİLER VE TANITIM (AÇIKÖĞRETİM)</item>
+        <item>HARİTA MÜHENDİSLİĞİ</item>
+        <item>HAVA TRAFİK KONTROL</item>
+        <item>HAVACILIK ELEKTRİK VE ELEKTRONİĞİ (FAKÜLTE)</item>
+        <item>HAVACILIK ELEKTRİK VE ELEKTRONİĞİ (YÜKSEKOKUL)</item>
+        <item>HAVACILIK VE UZAY MÜHENDİSLİĞİ</item>
+        <item>HAVACILIK YÖNETİMİ (AÇIKÖĞRETİM)</item>
+        <item>HAVACILIK YÖNETİMİ (FAKÜLTE)</item>
+        <item>HAVACILIK YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>HAYVANSAL ÜRETİM (YÜKSEKOKUL)</item>
+        <item>HAYVANSAL ÜRETİM VE TEKNOLOJİLERİ</item>
+        <item>HEMŞİRELİK (FAKÜLTE)</item>
+        <item>HEMŞİRELİK (YÜKSEKOKUL)</item>
+        <item>HEMŞİRELİK VE SAĞLIK HİZMETLERİ (FAKÜLTE)</item>
+        <item>HEMŞİRELİK VE SAĞLIK HİZMETLERİ (YÜKSEKOKUL)</item>
+        <item>HİDROJEOLOJİ MÜHENDİSLİĞİ</item>
+        <item>HİNDOLOJİ</item>
+        <item>HİTİTOLOJİ</item>
+        <item>HUKUK</item>
+        <item>HUNGAROLOJİ</item>
+        <item>İBRANİ DİLİ VE EDEBİYATI</item>
+        <item>İÇ MİMARLIK</item>
+        <item>İÇ MİMARLIK VE ÇEVRE TASARIMI</item>
+        <item>İKTİSADİ VE İDARİ BİLİMLER PROGRAMLARI</item>
+        <item>İKTİSADİ VE İDARİ PROGRAMLARI</item>
+        <item>İKTİSAT (AÇIKÖĞRETİM)</item>
+        <item>İKTİSAT</item>
+        <item>İLAHİYAT</item>
+        <item>İLETİŞİM BİLİMLERİ</item>
+        <item>İLETİŞİM SANATLARI</item>
+        <item>İLETİŞİM TASARIMI</item>
+        <item>İLETİŞİM TASARIMI VE MEDYA</item>
+        <item>İLETİŞİM TASARIMI VE YÖNETİMİ</item>
+        <item>İLETİŞİM VE TASARIM</item>
+        <item>İLETİŞİM</item>
+        <item>İLKÖĞRETİM MATEMATİK ÖĞRETMENLİĞİ</item>
+        <item>İMALAT MÜHENDİSLİĞİ</item>
+        <item>İMALAT MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>İNGİLİZ DİL BİLİMİ</item>
+        <item>İNGİLİZ DİLİ VE EDEBİYATI</item>
+        <item>İNGİLİZ DİLİ VE KARŞILAŞTIRMALI EDEBİYAT</item>
+        <item>İNGİLİZ VE RUS DİLLERİ VE EDEBİYATLARI</item>
+        <item>İNGİLİZCE ÖĞRETMENLİĞİ</item>
+        <item>İNŞAAT MÜHENDİSLİĞİ</item>
+        <item>İNŞAAT MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>İNSAN KAYNAKLARI YÖNETİMİ (FAKÜLTE)</item>
+        <item>İNSAN KAYNAKLARI YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>İNSAN VE TOPLUM BİLİMLERİ</item>
+        <item>İŞ SAĞLIĞI VE GÜVENLİĞİ (FAKÜLTE)</item>
+        <item>İŞ SAĞLIĞI VE GÜVENLİĞİ (YÜKSEKOKUL)</item>
+        <item>İSLAM BİLİMLERİ</item>
+        <item>İSLAM EKONOMİSİ VE FİNANS</item>
+        <item>SLAM VE DİN BİLİMLERİ</item>
+        <item>İSLAMİ İLİMLER</item>
+        <item>İŞLETME (AÇIKÖĞRETİM)</item>
+        <item>İŞLETME BİLGİ YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>İŞLETME ENFORMATİĞİ</item>
+        <item>İŞLETME MÜHENDİSLİĞİ</item>
+        <item>İŞLETME YÖNETİMİ</item>
+        <item>İŞLETME</item>
+        <item>İŞLETME-EKONOMİ</item>
+        <item>İSPANYOL DİLİ VE EDEBİYATI</item>
+        <item>İSTATİSTİK VE BİLGİSAYAR BİLİMLERİ</item>
+        <item>İSTATİSTİK</item>
+        <item>İTALYAN DİLİ VE EDEBİYATI</item>
+        <item>JAPON DİLİ VE EDEBİYATI</item>
+        <item>JAPONCA ÖĞRETMENLİĞİ</item>
+        <item>JEOFİZİK MÜHENDİSLİĞİ</item>
+        <item>JEOLOJİ MÜHENDİSLİĞİ</item>
+        <item>KAMU YÖNETİMİ</item>
+        <item>KAMU YÖNETİMİ (AÇIKÖĞRETİM)</item>
+        <item>KANATLI HAYVAN YETİŞTİRİCİLİĞİ</item>
+        <item>KARŞILAŞTIRMALI EDEBİYAT</item>
+        <item>KAZAK DİLİ VE EDEBİYATI</item>
+        <item>KENTSEL TASARIM VE PEYZAJ MİMARİSİ</item>
+        <item>KENTSEL TASARIM VE PEYZAJ MİMARLIĞI</item>
+        <item>KİMYA MÜHENDİSLİĞİ</item>
+        <item>KİMYA MÜHENDİSLİĞİ VE UYGULAMALI KİMYA</item>
+        <item>KİMYA ÖĞRETMENLİĞİ</item>
+        <item>KİMYA VE SÜREÇ MÜHENDİSLİĞİ</item>
+        <item>KİMYA</item>
+        <item>KİMYA-BİYOLOJİ MÜHENDİSLİĞİ</item>
+        <item>KLASİK ARKEOLOJİ</item>
+        <item>KONAKLAMA İŞLETMECİLİĞİ (FAKÜLTE)</item>
+        <item>KONAKLAMA İŞLETMECİLİĞİ (FAKÜLTE) (AÇIKÖĞRETİM)</item>
+        <item>KONAKLAMA İŞLETMECİLİĞİ (YÜKSEKOKUL)</item>
+        <item>KONAKLAMA VE TURİZM İŞLETMECİLİĞİ (YÜKSEKOKUL)</item>
+        <item>KONTROL VE OTOMASYON MÜHENDİSLİĞİ</item>
+        <item>KORE DİLİ VE EDEBİYATI</item>
+        <item>KÜLTÜR VARLIKLARINI KORUMA VE ONARIM</item>
+        <item>KÜLTÜR VE İLETİŞİM BİLİMLERİ</item>
+        <item>KÜRESEL SİYASET VE ULUSLARARASI İLİŞKİLER</item>
+        <item>KURGU-SES VE GÖRÜNTÜ YÖNETİMİ</item>
+        <item>KÜRT DİLİ VE EDEBİYATI</item>
+        <item>KUYUMCULUK VE MÜCEVHER TASARIMI</item>
+        <item>KUYUMCULUK VE MÜCEVHER TASARIMI (M.T.O.K.)</item>
+        <item>KUYUMCULUK VE MÜCEVHER TASARIMI (M.T.O.K.)</item>
+        <item>LATİN DİLİ VE EDEBİYATI</item>
+        <item>LEH DİLİ VE EDEBİYATI</item>
+        <item>LİF VE POLİMER MÜHENDİSLİĞİ</item>
+        <item>LOJİSTİK (YÜKSEKOKUL)</item>
+        <item>LOJİSTİK VE TAŞIMACILIK (YÜKSEKOKUL)</item>
+        <item>LOJİSTİK YÖNETİMİ (FAKÜLTE)</item>
+        <item>LOJİSTİK YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>MADEN MÜHENDİSLİĞİ</item>
+        <item>MAKİNE MÜHENDİSLİĞİ</item>
+        <item>MAKİNE MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>MAKİNE VE İMALAT MÜHENDİSLİĞİ</item>
+        <item>MAKİNE VE İMALAT MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>MALİYE (AÇIKÖĞRETİM)</item>
+        <item>MALİYE</item>
+        <item>MALZEME BİLİMİ VE MÜHENDİSLİĞİ</item>
+        <item>MALZEME BİLİMİ VE NANOTEKNOLOJİ MÜHENDİSLİĞİ</item>
+        <item>MALZEME BİLİMİ VE TEKNOLOJİLERİ</item>
+        <item>MALZEME MÜHENDİSLİĞİ</item>
+        <item>MATEMATİK MÜHENDİSLİĞİ</item>
+        <item>MATEMATİK ÖĞRETMENLİĞİ</item>
+        <item>MATEMATİK VE BİLGİSAYAR BİLİMLERİ</item>
+        <item>MATEMATİK</item>
+        <item>MATEMATİK-BİLGİSAYAR</item>
+        <item>MEDYA VE GÖRSEL SANATLAR</item>
+        <item>MEDYA VE İLETİŞİM</item>
+        <item>MEDYA VE İLETİŞİM SİSTEMLERİ (FAKÜLTE)</item>
+        <item>MEDYA VE İLETİŞİM SİSTEMLERİ (YÜKSEKOKUL)</item>
+        <item>MEKATRONİK MÜHENDİSLİĞİ</item>
+        <item>MEKATRONİK MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>MEKATRONİK SİSTEMLER MÜHENDİSLİĞİ</item>
+        <item>METALURJİ VE MALZEME MÜHENDİSLİĞİ</item>
+        <item>METALURJİ VE MALZEME MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>METEOROLOJİ MÜHENDİSLİĞİ</item>
+        <item>MİMARLIK</item>
+        <item>MODA TASARIMI (FAKÜLTE)</item>
+        <item>MODA TASARIMI (M.T.O.K.)</item>
+        <item>MODA TASARIMI (YÜKSEKOKUL)</item>
+        <item>MODA VE TEKSTİL TASARIMI</item>
+        <item>MOLEKÜLER BİYOLOJİ VE GENETİK</item>
+        <item>MOLEKÜLER BİYOTEKNOLOJİ</item>
+        <item>MUHASEBE (YÜKSEKOKUL)</item>
+        <item>MUHASEBE BİLGİ SİSTEMLERİ (YÜKSEKOKUL)</item>
+        <item>MUHASEBE VE DENETİM (FAKÜLTE)</item>
+        <item>MUHASEBE VE DENETİM (YÜKSEKOKUL)</item>
+        <item>MUHASEBE VE FİNANS YÖNETİMİ (FAKÜLTE)</item>
+        <item>MUHASEBE VE FİNANS YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>MUHASEBE VE FİNANSAL YÖNETİM (FAKÜLTE)</item>
+        <item>MUHASEBE VE FİNANSAL YÖNETİM (YÜKSEKOKUL)</item>
+        <item>MÜHENDİSLİK PROGRAMLARI</item>
+        <item>MÜHENDİSLİK VE DOĞA BİLİMLERİ PROGRAMLARI</item>
+        <item>MÜTERCİM-TERCÜMANLIK(DİL-1)</item>
+        <item>MÜTERCİM-TERCÜMANLIK(DİL-2)</item>
+        <item>MÜTERCİM-TERCÜMANLIK(DİL-3)</item>
+        <item>MÜZECİLİK</item>
+        <item>MÜZİKOLOJİ</item>
+        <item>NANOBİLİM VE NANOTEKNOLOJİ</item>
+        <item>NANOTEKNOLOJİ MÜHENDİSLİĞİ</item>
+        <item>NÜKLEER ENERJİ MÜHENDİSLİĞİ</item>
+        <item>ODYOLOJİ (FAKÜLTE)</item>
+        <item>ODYOLOJİ (YÜKSEKOKUL)</item>
+        <item>ÖĞRETMENLİK PROGRAMLARI</item>
+        <item>OKUL ÖNCESİ ÖĞRETMENLİĞİ</item>
+        <item>OPTİK VE AKUSTİK MÜHENDİSLİĞİ</item>
+        <item>ORGANİK TARIM İŞLETMECİLİĞİ (YÜKSEKOKUL)</item>
+        <item>ORMAN ENDÜSTRİSİ MÜHENDİSLİĞİ</item>
+        <item>ORMAN MÜHENDİSLİĞİ</item>
+        <item>ORTEZ-PROTEZ (FAKÜLTE)</item>
+        <item>ORTEZ-PROTEZ (YÜKSEKOKUL)</item>
+        <item>OTEL YÖNETİCİLİĞİ (YÜKSEKOKUL)</item>
+        <item>OTOMOTİV MÜHENDİSLİĞİ</item>
+        <item>OTOMOTİV MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>ÖZEL EĞİTİM ÖĞRETMENLİĞİ</item>
+        <item>PAZARLAMA (FAKÜLTE)</item>
+        <item>PAZARLAMA (YÜKSEKOKUL)</item>
+        <item>PERFÜZYON (FAKÜLTE)</item>
+        <item>PERFÜZYON (YÜKSEKOKUL)</item>
+        <item>PETROL VE DOĞALGAZ MÜHENDİSLİĞİ</item>
+        <item>PEYZAJ MİMARLIĞI</item>
+        <item>PİLOT EĞİTİMİ</item>
+        <item>PİLOTAJ</item>
+        <item>POLİMER MÜHENDİSLİĞİ</item>
+        <item>POLONYA DİLİ VE KÜLTÜRÜ</item>
+        <item>PROTOHİSTORYA VE ÖN ASYA ARKEOLOJİSİ</item>
+        <item>PSİKOLOJİ</item>
+        <item>PSİKOLOJİK DANIŞMANLIK VE REHBERLİK</item>
+        <item>PSİKOLOJİK DANIŞMANLIK VE REHBERLİK ÖĞRETMENLİĞİ</item>
+        <item>RADYO VE TELEVİZYON</item>
+        <item>RADYO, TELEVİZYON VE SİNEMA</item>
+        <item>RAYLI SİSTEMLER MÜHENDİSLİĞİ</item>
+        <item>REHBERLİK VE PSİKOLOJİK DANIŞMANLIK</item>
+        <item>REKLAM TASARIMI VE İLETİŞİMİ</item>
+        <item>REKLAMCILIK VE HALKLA İLİŞKİLER</item>
+        <item>REKLAMCILIK</item>
+        <item>REKREASYON (FAKÜLTE)</item>
+        <item>REKREASYON (YÜKSEKOKUL)</item>
+        <item>REKREASYON YÖNETİMİ (FAKÜLTE)</item>
+        <item>REKREASYON YÖNETİMİ (M.T.O.K.)</item>
+        <item>REKREASYON YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>RESTORASYON VE KONSERVASYON</item>
+        <item>RUS DİLİ ÖĞRETMENLİĞİ</item>
+        <item>RUS DİLİ VE EDEBİYATI</item>
+        <item>RUS DİLİ VE EDEBİYATI ÖĞRETMENLİĞİ</item>
+        <item>RUS VE İNGİLİZ DİLLERİ VE EDEBİYATI</item>
+        <item>SAĞLIK İDARESİ</item>
+        <item>SAĞLIK YÖNETİMİ (AÇIKÖĞRETİM)</item>
+        <item>SAĞLIK YÖNETİMİ (FAKÜLTE)</item>
+        <item>SAĞLIK YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>SANAT TARİHİ</item>
+        <item>SANAT VE KÜLTÜR YÖNETİMİ</item>
+        <item>SANAT VE SOSYAL BİLİMLER PROGRAMLARI</item>
+        <item>SANAT YÖNETİMİ</item>
+        <item>ŞEHİR VE BÖLGE PLANLAMA</item>
+        <item>SERMAYE PİYASALARI VE PORTFÖY YÖNETİMİ (FAKÜLTE)</item>
+        <item>SERMAYE PİYASALARI VE PORTFÖY YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>SERMAYE PİYASASI (YÜKSEKOKUL)</item>
+        <item>SEYAHAT İŞLETMECİLİĞİ (FAKÜLTE)</item>
+        <item>SEYAHAT İŞLETMECİLİĞİ (YÜKSEKOKUL)</item>
+        <item>SEYAHAT İŞLETMECİLİĞİ VE TURİZM REHBERLİĞİ (FAKÜLTE)</item>
+        <item>SEYAHAT İŞLETMECİLİĞİ VE TURİZM REHBERLİĞİ (M.T.O.K.)</item>
+        <item>SİGORTACILIK (YÜKSEKOKUL)</item>
+        <item>SİGORTACILIK VE AKTÜERYA BİLİMLERİ (FAKÜLTE)</item>
+        <item>SİGORTACILIK VE RİSK YÖNETİMİ (FAKÜLTE)</item>
+        <item>SİGORTACILIK VE RİSK YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>SİGORTACILIK VE SOSYAL GÜVENLİK</item>
+        <item>SİNEMA VE DİJİTAL MEDYA</item>
+        <item>SİNEMA VE TELEVİZYON</item>
+        <item>SINIF ÖĞRETMENLİĞİ</item>
+        <item>SİNOLOJİ</item>
+        <item>SİYASAL BİLİMLER</item>
+        <item>SİYASET BİLİMİ</item>
+        <item>SİYASET BİLİMİ VE KAMU YÖNETİMİ</item>
+        <item>SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER</item>
+        <item>SOSYAL BİLGİLER ÖĞRETMENLİĞİ</item>
+        <item>SOSYAL HİZMET (AÇIKÖĞRETİM)</item>
+        <item>SOSYAL HİZMET (FAKÜLTE)</item>
+        <item>SOSYAL HİZMET (FAKÜLTE) (AÇIKÖĞRETİM)</item>
+        <item>SOSYAL HİZMET (YÜKSEKOKUL)</item>
+        <item>SOSYAL VE SİYASAL BİLİMLER</item>
+        <item>SOSYOLOJİ (AÇIKÖĞRETİM)</item>
+        <item>SOSYOLOJİ</item>
+        <item>SPOR YÖNETİCİLİĞİ (FAKÜLTE)</item>
+        <item>SPOR YÖNETİCİLİĞİ (YÜKSEKOKUL)</item>
+        <item>SU BİLİMLERİ MÜHENDİSLİĞİ</item>
+        <item>SU ÜRÜNLERİ MÜHENDİSLİĞİ</item>
+        <item>SÜMEROLOJİ</item>
+        <item>SÜRYANİ DİLİ VE EDEBİYATI</item>
+        <item>SÜT TEKNOLOJİSİ</item>
+        <item>TAKI TASARIMI (FAKÜLTE)</item>
+        <item>TAPU KADASTRO (YÜKSEKOKUL)</item>
+        <item>TARİH (AÇIKÖĞRETİM)</item>
+        <item>TARİH ÖĞRETMENLİĞİ</item>
+        <item>TARİH ÖNCESİ ARKEOLOJİSİ</item>
+        <item>TARİH</item>
+        <item>TARIM EKONOMİSİ</item>
+        <item>TARIM MAKİNELERİ VE TEKNOLOJİLERİ MÜHENDİSLİĞİ</item>
+        <item>TARIMSAL BİYOTEKNOLOJİ</item>
+        <item>TARIMSAL GENETİK MÜHENDİSLİĞİ</item>
+        <item>TARIMSAL YAPILAR VE SULAMA</item>
+        <item>TARLA BİTKİLERİ</item>
+        <item>TAŞINABİLİR KÜLTÜR VARLIKLARINI KORUMA VE ONARIM</item>
+        <item>TEKNOLOJİ VE BİLGİ YÖNETİMİ</item>
+        <item>TEKSTİL MÜHENDİSLİĞİ</item>
+        <item>TEKSTİL TASARIMI (M.T.O.K.)</item>
+        <item>TEKSTİL VE MODA TASARIMI</item>
+        <item>TELEVİZYON HABERCİLİĞİ VE PROGRAMCILIĞI (FAKÜLTE)</item>
+        <item>TELEVİZYON HABERCİLİĞİ VE PROGRAMCILIĞI (YÜKSEKOKUL)</item>
+        <item>TIP MÜHENDİSLİĞİ</item>
+        <item>TIP</item>
+        <item>TİYATRO ELEŞTİRMENLİĞİ VE DRAMATURJİ (FAKÜLTE)</item>
+        <item>TOPRAK BİLİMİ VE BİTKİ BESLEME</item>
+        <item>TURİZM İŞLETMECİLİĞİ (FAKÜLTE)</item>
+        <item>TURİZM İŞLETMECİLİĞİ (M.T.O.K.)</item>
+        <item>TURİZM İŞLETMECİLİĞİ (YÜKSEKOKUL)</item>
+        <item>TURİZM İŞLETMECİLİĞİ VE OTELCİLİK (YÜKSEKOKUL)</item>
+        <item>TURİZM REHBERLİĞİ</item>
+        <item>TURİZM VE OTEL İŞLETMECİLİĞİ (FAKÜLTE)</item>
+        <item>TURİZM VE OTEL İŞLETMECİLİĞİ (YÜKSEKOKUL)</item>
+        <item>TURİZM VE OTEL YÖNETİCİLİĞİ</item>
+        <item>TURİZM VE OTELCİLİK (FAKÜLTE)</item>
+        <item>TURİZM VE OTELCİLİK (YÜKSEKOKUL)</item>
+        <item>TÜRK DİLİ VE EDEBİYATI</item>
+        <item>TÜRK DİLİ VE EDEBİYATI (AÇIKÖĞRETİM)</item>
+        <item>TÜRK DİLİ VE EDEBİYATI ÖĞRETMENLİĞİ</item>
+        <item>TÜRK HALKBİLİMİ</item>
+        <item>TÜRK İSLAM ARKEOLOJİSİ</item>
+        <item>TÜRKÇE ÖĞRETMENLİĞİ</item>
+        <item>TÜRKOLOJİ</item>
+        <item>TÜTÜN EKSPERLİĞİ (YÜKSEKOKUL)</item>
+        <item>UÇAK ELEKTRİK-ELEKTRONİK (FAKÜLTE)</item>
+        <item>UÇAK ELEKTRİK-ELEKTRONİK (YÜKSEKOKUL)</item>
+        <item>UÇAK GÖVDE-MOTOR (FAKÜLTE)</item>
+        <item>UÇAK GÖVDE-MOTOR (YÜKSEKOKUL)</item>
+        <item>UÇAK GÖVDE-MOTOR BAKIM (FAKÜLTE)</item>
+        <item>UÇAK GÖVDE-MOTOR BAKIM (YÜKSEKOKUL)</item>
+        <item>UÇAK MÜHENDİSLİĞİ</item>
+        <item>UÇAK VE UZAY MÜHENDİSLİĞİ</item>
+        <item>UKRAYNA DİLİ VE EDEBİYATI</item>
+        <item>ULAŞTIRMA MÜHENDİSLİĞİ</item>
+        <item>ULAŞTIRMA VE LOJİSTİK (FAKÜLTE)</item>
+        <item>ULAŞTIRMA VE LOJİSTİK (YÜKSEKOKUL)</item>
+        <item>ULAŞTIRMA VE LOJİSTİK YÖNETİMİ (FAKÜLTE)</item>
+        <item>ULAŞTIRMA VE LOJİSTİK YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI EKONOMİK İLİŞKİLER</item>
+        <item>ULUSLARARASI FİNANS (FAKÜLTE)</item>
+        <item>ULUSLARARASI FİNANS (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI FİNANS VE BANKACILIK (FAKÜLTE)</item>
+        <item>ULUSLARARASI FİNANS VE BANKACILIK (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI GİRİŞİMCİLİK</item>
+        <item>ULUSLARARASI İLİŞKİLER</item>
+        <item>ULUSLARARASI İLİŞKİLER (AÇIKÖĞRETİM)</item>
+        <item>ULUSLARARASI İŞLETME</item>
+        <item>ULUSLARARASI İŞLETME YÖNETİMİ</item>
+        <item>ULUSLARARASI İŞLETMECİLİK</item>
+        <item>ULUSLARARASI İŞLETMECİLİK VE TİCARET (FAKÜLTE)</item>
+        <item>ULUSLARARASI İŞLETMECİLİK VE TİCARET (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI LOJİSTİK (FAKÜLTE)</item>
+        <item>ULUSLARARASI LOJİSTİK (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI LOJİSTİK VE TAŞIMACILIK (FAKÜLTE)</item>
+        <item>ULUSLARARASI LOJİSTİK VE TAŞIMACILIK (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI LOJİSTİK YÖNETİMİ</item>
+        <item>ULUSLARARASI PERAKENDE YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI TİCARET (FAKÜLTE)</item>
+        <item>ULUSLARARASI TİCARET (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI TİCARET VE FİNANS</item>
+        <item>ULUSLARARASI TİCARET VE FİNANSMAN</item>
+        <item>ULUSLARARASI TİCARET VE İŞLETMECİLİK (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI TİCARET VE İŞLETMECİLİK (FAKÜLTE)</item>
+        <item>ULUSLARARASI TİCARET VE LOJİSTİK (FAKÜLTE)</item>
+        <item>ULUSLARARASI TİCARET VE LOJİSTİK (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI TİCARET VE LOJİSTİK YÖNETİMİ (AÇIKÖĞRETİM)</item>
+        <item>ULUSLARARASI TİCARET VE LOJİSTİK YÖNETİMİ (FAKÜLTE)</item>
+        <item>ULUSLARARASI TİCARET VE LOJİSTİK YÖNETİMİ (YÜKSEKOKUL)</item>
+        <item>ULUSLARARASI TİCARET, LOJİSTİK VE İŞLETMECİLİK (YÜKSEKOKUL)</item>
+        <item>URDU DİLİ VE EDEBİYATI</item>
+        <item>UZAY BİLİMLERİ VE TEKNOLOJİLERİ</item>
+        <item>UZAY MÜHENDİSLİĞİ</item>
+        <item>VETERİNERLİK</item>
+        <item>YABAN HAYATI EKOLOJİSİ VE YÖNETİMİ</item>
+        <item>YAZILIM MÜHENDİSLİĞİ</item>
+        <item>YAZILIM MÜHENDİSLİĞİ (M.T.O.K.)</item>
+        <item>YENİ MEDYA (FAKÜLTE)</item>
+        <item>YENİ MEDYA (YÜKSEKOKUL)</item>
+        <item>YENİ MEDYA VE GAZETECİLİK</item>
+        <item>YENİ MEDYA VE İLETİŞİM</item>
+        <item>YENİ MEDYA VE İLETİŞİM SİSTEMLERİ</item>
+        <item>YER BİLİMLERİ MÜHENDİSLİĞİ PROGRAMLARI</item>
+        <item>YEREL YÖNETİMLER</item>
+        <item>YİYECEK-İÇECEK İŞLETMECİLİĞİ (FAKÜLTE)</item>
+        <item>YİYECEK-İÇECEK İŞLETMECİLİĞİ (YÜKSEKOKUL)</item>
+        <item>YÖNETİM BİLİMLERİ PROGRAMLARI</item>
+        <item>YÖNETİM BİLİŞİM SİSTEMLERİ (AÇIKÖĞRETİM)</item>
+        <item>YÖNETİM BİLİŞİM SİSTEMLERİ (FAKÜLTE)</item>
+        <item>YÖNETİM BİLİŞİM SİSTEMLERİ (YÜKSEKOKUL)</item>
+        <item>YUNAN DİLİ VE EDEBİYATI</item>
+        <item>ZAZA DİLİ VE EDEBİYATI</item>
+        <item>ZİRAAT MÜHENDİSLİĞİ PROGRAMLARI</item>
+        <item>ZOOTEKNİ</item>
+    </string-array>
+    <string name="name_hint">Name</string>
+    <string name="name_error">Please enter your name.</string>
+    <string name="school_error">Please select your school.</string>
+    <string name="department_error">Please select your department.</string>
+    <string name="school_hint">University</string>
+    <string name="department_hint">Department</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

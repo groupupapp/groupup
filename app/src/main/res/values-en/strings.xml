@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GroupUp!</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="email_error">Please enter a valid email address.</string>
+    <string name="password_error">Password length must be at least 6 characters.</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="email_in_use">This email address is already in use by another account.</string>
+    <string name="already_have_account">Already have an account? Login.</string>
+    <string name="registering">Registering...</string>
+    <string name="not_have_account">Not have an account? Register.</string>
+    <string name="loggingin">Logging in...</string>
+    <string name="logout">Logout</string>
+    <string name="invalid_password">The email address or password is incorrect.</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="trouble_logging_in">Trouble logging in?</string>
+    <string name="email_sent">Email sent.</string>
+    <string name="reset">Reset</string>
+    <string name="pp_and_tos">By registering, you agree to the Privacy Policy and Terms of Service.</string>
+    <string name="name_hint">Name</string>
+    <string name="name_error">Please enter your name.</string>
+    <string name="school_error">Please select your school.</string>
+    <string name="department_error">Please select your department.</string>
+    <string name="school_hint">University</string>
+    <string name="department_hint">Department</string>
+</resources>
