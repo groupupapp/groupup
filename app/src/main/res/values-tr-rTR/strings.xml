@@ -25,4 +25,7 @@
     <string name="department_error">Lütfen bölümünüzü seçin.</string>
     <string name="school_hint">Üniversite</string>
     <string name="department_hint">Bölüm</string>
+    <string name="explore">Keşfet</string>
+    <string name="create_group">Grup Oluştur</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

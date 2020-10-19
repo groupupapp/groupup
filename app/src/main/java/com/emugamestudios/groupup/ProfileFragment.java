@@ -1,5 +1,6 @@
 package com.emugamestudios.groupup;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,6 +10,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -25,6 +28,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+
+import java.util.Objects;
 
 
 public class ProfileFragment extends Fragment {
@@ -64,11 +69,11 @@ public class ProfileFragment extends Fragment {
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot ds : snapshot.getChildren()){
-                    String name = ""+ ds.child("name").getValue();
-                    String uni = ""+ ds.child("uni").getValue();
-                    String department = ""+ ds.child("department").getValue();
-                    String photo = ""+ ds.child("photo").getValue();
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    String name = "" + ds.child("name").getValue();
+                    String uni = "" + ds.child("uni").getValue();
+                    String department = "" + ds.child("department").getValue();
+                    String photo = "" + ds.child("photo").getValue();
 
                     text_name.setText(name);
                     text_department.setText(department);
@@ -76,14 +81,25 @@ public class ProfileFragment extends Fragment {
                     Glide.with(ProfileFragment.this).load(photo).circleCrop().into(image_avatar);
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
-
-
         return view;
     }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        getActivity().getMenuInflater().inflate(R.menu.menu_profile, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
 
 }

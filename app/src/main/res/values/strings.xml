@@ -774,6 +774,7 @@
     <string name="department_error">Please select your department.</string>
     <string name="school_hint">University</string>
     <string name="department_hint">Department</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="explore">Explore</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_group">Create Group</string>
 </resources>
