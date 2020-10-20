@@ -112,22 +112,9 @@ public class ProfileFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_settings:
-                SettingsFragment fragment1 = new SettingsFragment();
-                FragmentTransaction fragmentTransaction1 = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction1.replace(R.id.content, fragment1, "");
-                fragmentTransaction1.commit();
-
-
-
-
-
-                /*if(count == 1){
-                    rightBar.setVisibility(View.VISIBLE);
-                    count = 0;
-                }else {
-                    rightBar.setVisibility(View.INVISIBLE);
-                    count = 1;
-                }*/
+                Intent intent = new Intent(getActivity(), OthersActivity.class);
+                startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
 
         default:return super.onOptionsItemSelected(item);}
