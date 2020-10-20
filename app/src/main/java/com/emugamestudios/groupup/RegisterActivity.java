@@ -173,6 +173,7 @@ public class RegisterActivity extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             progress_register.setVisibility(View.INVISIBLE);
+                            button_register.setVisibility(View.VISIBLE);
 
                         }
                     }
@@ -180,6 +181,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 progress_register.setVisibility(View.INVISIBLE);
+                button_register.setVisibility(View.VISIBLE);
                 til_email.setError(getResources().getString(R.string.email_in_use));
                 edittext_email.setFocusable(true);
             }
