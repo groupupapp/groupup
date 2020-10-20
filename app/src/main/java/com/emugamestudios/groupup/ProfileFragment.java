@@ -39,7 +39,7 @@ public class ProfileFragment extends Fragment {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-    ImageView image_avatar, image_cover;
+    ImageView image_avatar;
     TextView text_name, text_uni, text_department;
 
     public ProfileFragment() {
@@ -60,7 +60,6 @@ public class ProfileFragment extends Fragment {
         databaseReference = firebaseDatabase.getReference("Users");
 
         image_avatar = view.findViewById(R.id.image_avatar);
-        image_cover = view.findViewById(R.id.image_cover);
         text_name = view.findViewById(R.id.text_name);
         text_uni = view.findViewById(R.id.text_uni);
         text_department = view.findViewById(R.id.text_department);
