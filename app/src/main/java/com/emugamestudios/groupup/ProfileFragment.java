@@ -15,7 +15,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,12 +37,12 @@ import java.util.Objects;
 
 
 public class ProfileFragment extends Fragment {
-
+    RelativeLayout rightBar;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-
+    int count = 1;
     ImageView image_avatar;
     TextView text_name, text_uni, text_department;
 
@@ -65,6 +67,10 @@ public class ProfileFragment extends Fragment {
         text_name = view.findViewById(R.id.text_name);
         text_uni = view.findViewById(R.id.text_uni);
         text_department = view.findViewById(R.id.text_department);
+        rightBar = view.findViewById(R.id.rightbar);
+        rightBar.bringToFront();
+        rightBar.setVisibility(View.INVISIBLE);
+
 
         Query query = databaseReference.orderByChild("email").equalTo(firebaseUser.getEmail());
         query.addValueEventListener(new ValueEventListener() {
@@ -102,4 +108,19 @@ public class ProfileFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_settings:
+                if(count == 1){
+                    rightBar.setVisibility(View.VISIBLE);
+                    count = 0;
+                }else {
+                    rightBar.setVisibility(View.INVISIBLE);
+                    count = 1;
+                }
+
+
+        default:return super.onOptionsItemSelected(item);}
+    }
 }
