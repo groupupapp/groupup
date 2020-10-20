@@ -105,7 +105,6 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            progress_login.setVisibility(View.INVISIBLE);
                             // Sign in success, update UI with the signed-in user's information
 
                             startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
@@ -113,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         } else {
                             progress_login.setVisibility(View.INVISIBLE);
-
+                            button_login.setVisibility(View.VISIBLE);
                         }
 
                     }
@@ -121,6 +120,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 progress_login.setVisibility(View.INVISIBLE);
+                button_login.setVisibility(View.VISIBLE);
                 til_password_login.setError(getResources().getString(R.string.invalid_password));
             }
         });
