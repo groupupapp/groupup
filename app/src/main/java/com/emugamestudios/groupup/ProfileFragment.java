@@ -112,13 +112,22 @@ public class ProfileFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_settings:
-                if(count == 1){
+                SettingsFragment fragment1 = new SettingsFragment();
+                FragmentTransaction fragmentTransaction1 = getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction1.replace(R.id.content, fragment1, "");
+                fragmentTransaction1.commit();
+
+
+
+
+
+                /*if(count == 1){
                     rightBar.setVisibility(View.VISIBLE);
                     count = 0;
                 }else {
                     rightBar.setVisibility(View.INVISIBLE);
                     count = 1;
-                }
+                }*/
 
 
         default:return super.onOptionsItemSelected(item);}
