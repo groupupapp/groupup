@@ -97,14 +97,24 @@ public class DashboardActivity extends AppCompatActivity {
                             fragmentTransaction3.commit();
                             return true;
 
-                        case R.id.nav_profile:
-                            //profile fragment
+                        case R.id.nav_notifications:
+                            //add fragment
                             ActionBar actionBar4 = getSupportActionBar();
-                            actionBar4.setTitle(yourname);
-                            ProfileFragment fragment4 = new ProfileFragment();
+                            actionBar4.setTitle(getResources().getString(R.string.notifications));
+                            NotificationsFragment fragment4 = new NotificationsFragment();
                             FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
                             fragmentTransaction4.replace(R.id.content, fragment4, "");
                             fragmentTransaction4.commit();
+                            return true;
+
+                        case R.id.nav_profile:
+                            //profile fragment
+                            ActionBar actionBar5 = getSupportActionBar();
+                            actionBar5.setTitle(yourname);
+                            ProfileFragment fragment5 = new ProfileFragment();
+                            FragmentTransaction fragmentTransaction5 = getSupportFragmentManager().beginTransaction();
+                            fragmentTransaction5.replace(R.id.content, fragment5, "");
+                            fragmentTransaction5.commit();
                             return true;
                     }
                     return false;

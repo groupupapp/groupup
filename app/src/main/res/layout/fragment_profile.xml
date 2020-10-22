@@ -6,16 +6,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".ProfileFragment">
 
-<RelativeLayout
-    android:id="@+id/rightbar"
-    android:background="#fff"
-    android:layout_alignParentRight="true"
-    android:layout_height="match_parent"
-    android:layout_width="100dp">
-
-
-</RelativeLayout>
-<ScrollView
+    <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <RelativeLayout

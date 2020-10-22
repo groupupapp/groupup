@@ -67,9 +67,6 @@ public class ProfileFragment extends Fragment {
         text_name = view.findViewById(R.id.text_name);
         text_uni = view.findViewById(R.id.text_uni);
         text_department = view.findViewById(R.id.text_department);
-        rightBar = view.findViewById(R.id.rightbar);
-        rightBar.bringToFront();
-        rightBar.setVisibility(View.INVISIBLE);
 
 
         Query query = databaseReference.orderByChild("email").equalTo(firebaseUser.getEmail());

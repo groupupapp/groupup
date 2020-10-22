@@ -28,4 +28,5 @@
     <string name="explore">Keşfet</string>
     <string name="create_group">Grup Oluştur</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notifications">Bildirimler</string>
 </resources>
