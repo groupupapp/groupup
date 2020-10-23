@@ -12,8 +12,10 @@
         android:roundIcon="@mipmap/ic_groupup_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OthersActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".AddActivity" />
+        <activity
+            android:name=".OthersActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ForgotActivity"
             android:theme="@style/AppTheme.NoActionBar" />

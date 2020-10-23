@@ -88,14 +88,11 @@ public class DashboardActivity extends AppCompatActivity {
                             return true;
 
                         case R.id.nav_add:
-                            //add fragment
-                            ActionBar actionBar3 = getSupportActionBar();
-                            actionBar3.setTitle(getResources().getString(R.string.create_group));
-                            AddFragment fragment3 = new AddFragment();
-                            FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
-                            fragmentTransaction3.replace(R.id.content, fragment3, "");
-                            fragmentTransaction3.commit();
-                            return true;
+                            //add activity
+                            Intent intent = new Intent(DashboardActivity.this, AddActivity.class);
+                            startActivity(intent);
+
+                            return false;
 
                         case R.id.nav_notifications:
                             //add fragment

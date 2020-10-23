@@ -113,7 +113,6 @@ public class ProfileFragment extends Fragment {
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
-
         default:return super.onOptionsItemSelected(item);}
     }
 }
