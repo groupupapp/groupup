@@ -779,4 +779,8 @@
     <string name="create_group">Create Group</string>
     <string name="notifications">Notifications</string>
     <string name="create">CREATE</string>
+    <string name="hint_groupname">Group name</string>
+    <string name="group_icon">Group icon</string>
+    <string name="hint_groupdescription">Group description</string>
+    <string name="group_members">Group members</string>
 </resources>

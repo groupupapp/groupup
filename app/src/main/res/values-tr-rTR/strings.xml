@@ -30,4 +30,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="notifications">Bildirimler</string>
     <string name="create">OLUŞTUR</string>
+    <string name="hint_groupname">Grup adı</string>
+    <string name="group_icon">Grup resmi</string>
+    <string name="hint_groupdescription">Grup açıklaması</string>
+    <string name="group_members">Grup üyeleri</string>
 </resources>
