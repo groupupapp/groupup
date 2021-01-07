@@ -34,4 +34,8 @@
     <string name="group_icon">Grup resmi</string>
     <string name="hint_groupdescription">Grup açıklaması</string>
     <string name="group_members">Grup üyeleri</string>
+    <string name="title_activity_settings">Ayarlar</string>
+    <string name="edit_profile_button_text">Profili Düzenle</string>
+    <string name="sign_out">Çıkış yap</string>
+    <string name="account">Hesap</string>
 </resources>

@@ -141,7 +141,7 @@ public class DashboardActivity extends AppCompatActivity {
         checkUserStatus();
         super.onStart();
     }
-
+/*
     //menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -158,5 +158,5 @@ public class DashboardActivity extends AppCompatActivity {
             checkUserStatus();
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }

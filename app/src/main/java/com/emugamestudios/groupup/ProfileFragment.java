@@ -34,14 +34,12 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Objects;
 
 public class ProfileFragment extends Fragment {
-    RelativeLayout rightBar;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    int count = 1;
     ImageView image_avatar;
-    TextView text_name, text_uni, text_department;
+    TextView text_name, text_uni, text_department, text_biography;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -61,6 +59,7 @@ public class ProfileFragment extends Fragment {
 
         image_avatar = view.findViewById(R.id.image_avatar);
         text_name = view.findViewById(R.id.text_name);
+        text_biography = view.findViewById(R.id.text_biography);
         text_uni = view.findViewById(R.id.text_uni);
         text_department = view.findViewById(R.id.text_department);
 
@@ -74,10 +73,12 @@ public class ProfileFragment extends Fragment {
                     String uni = "" + ds.child("uni").getValue();
                     String department = "" + ds.child("department").getValue();
                     String photo = "" + ds.child("photo").getValue();
+                    String bio = "" + ds.child("bio").getValue();
 
                     text_name.setText(name);
                     text_department.setText(department);
                     text_uni.setText(uni);
+                    text_biography.setText(bio);
                     Glide.with(ProfileFragment.this).load(photo).circleCrop().into(image_avatar);
                 }
             }
@@ -106,7 +107,7 @@ public class ProfileFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Intent intent = new Intent(getActivity(), OthersActivity.class);
+                Intent intent = new Intent(getActivity(), SettingsActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 

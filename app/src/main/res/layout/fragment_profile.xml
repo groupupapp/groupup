@@ -9,107 +9,93 @@ tools:context=".ProfileFragment">
     <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <RelativeLayout
-        android:id="@+id/header"
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/corner"/>
         <RelativeLayout
-            android:paddingTop="30dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
+            android:id="@+id/header"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/image_avatar"
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
-            <TextView
-                android:layout_marginBottom="5dp"
-                android:textColor="#fff"
-                android:id="@+id/text_name"
-                android:textSize="18sp"
-                android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@+id/image_avatar"
-                android:layout_width="wrap_content"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Murat Doğan"/>
-            <ImageView
-                android:layout_marginRight="-37dp"
-                android:layout_below="@+id/text_name"
-                android:layout_toLeftOf="@+id/text_uni"
-                android:id="@+id/school_icon"
-                android:layout_width="17dp"
-                android:layout_height="17dp"
-                android:src="@drawable/ic_school"/>
-            <TextView
-                android:layout_marginLeft="40dp"
-                android:textColor="#fff"
-                android:layout_below="@+id/text_name"
-                android:id="@+id/text_uni"
-                android:textSize="13sp"
-                android:layout_toRightOf="@+id/image_avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Murat Doğan"/>
-            <TextView
-                android:layout_marginBottom="5dp"
-                android:textColor="#fff"
-                android:layout_below="@+id/text_uni"
-                android:id="@+id/text_department"
-                android:textSize="10sp"
-                android:layout_marginLeft="40dp"
-                android:layout_toRightOf="@+id/image_avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Murat Doğan"/>
-            <ImageView
-                android:layout_marginRight="-37dp"
-                android:layout_below="@+id/text_department"
-                android:layout_toLeftOf="@+id/text_location"
-                android:id="@+id/location_icon"
-                android:layout_width="17dp"
-                android:layout_height="17dp"
-                android:src="@drawable/ic_location"/>
-            <TextView
-                android:textColor="#fff"
-                android:layout_below="@+id/text_department"
-                android:id="@+id/text_location"
-                android:textSize="13sp"
-                android:layout_marginLeft="40dp"
-                android:layout_toRightOf="@+id/image_avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Manisa"/>
-            <TextView
-                android:layout_marginTop="20dp"
-                android:textColor="#fff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biography"
-                android:id="@+id/text_biography"
-                android:layout_below="@id/image_avatar"/>
-            <Button
-                android:layout_marginTop="40dp"
-                android:backgroundTint="#fff"
-                android:layout_below="@id/text_biography"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Message"/>
-            <Button
-                android:layout_marginTop="40dp"
-                android:backgroundTint="#fff"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/text_biography"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ignore"/>
+                android:paddingLeft="30dp"
+                android:paddingTop="30dp"
+                android:paddingRight="30dp">
+
+                <ImageView
+                    android:id="@+id/image_avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/image_avatar"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/school_icon"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@+id/text_name"
+                    android:layout_marginRight="-37dp"
+                    android:layout_toLeftOf="@+id/text_uni"
+                    android:src="@drawable/ic_school" />
+
+                <TextView
+                    android:id="@+id/text_uni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/text_name"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@+id/image_avatar"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_uni"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/image_avatar"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/edit_profile_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/text_department"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_toEndOf="@+id/image_avatar"
+                    android:backgroundTint="#00FFFFFF"
+                    android:text="@string/edit_profile_button_text"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:rippleColor="#F44336"
+                    app:strokeColor="#FFFFFF"
+                    app:strokeWidth="1dp" />
+
+
+                <TextView
+                    android:id="@+id/text_biography"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edit_profile_button"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#fff" />
+
+            </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
 </ScrollView>
 
 </RelativeLayout>

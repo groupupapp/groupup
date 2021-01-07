@@ -153,6 +153,7 @@ public class RegisterActivity extends AppCompatActivity {
                             HashMap<Object, String> hashMap = new HashMap<>();
                             hashMap.put("email", email);
                             hashMap.put("uid", uid);
+                            hashMap.put("bio", "");
                             hashMap.put("name", name);
                             hashMap.put("uni", school);
                             hashMap.put("department", department);
