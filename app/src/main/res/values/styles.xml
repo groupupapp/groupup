@@ -5,6 +5,7 @@
         <item name="colorPrimary">#F44336</item>
         <item name="colorPrimaryDark">#2E2E2E</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
@@ -15,7 +16,7 @@
 
     </style>
     <style name="profile_button" >
-        <item name="android:textSize">19dp</item>
+        <item name="android:textSize">19sp</item>
         <item name="android:layout_margin">8dp</item>
         <item name="android:padding">8dp</item>
         <item name="android:textColor">#fff</item>
@@ -29,6 +30,13 @@
 
     <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
         <item name="backgroundTint">#00FFFFFF</item>
+    </style>
+
+    <!-- Style to replace actionbar overflow icon. set item 'android:actionOverflowButtonStyle' in AppTheme -->
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_notifications</item>
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
+        <item name="android:contentDescription">"Lala"</item>
     </style>
 
 </resources>
