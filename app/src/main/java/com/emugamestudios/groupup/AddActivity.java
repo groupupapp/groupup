@@ -21,21 +21,19 @@ public class AddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-
-        assert getSupportActionBar() != null;   //null check
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);   //show back button
+        //sağ üstteki create tuşu
+        assert getSupportActionBar() != null;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.create_group);
-
+        // grup fotosu ekleme
         image_group = findViewById(R.id.image_group);
-
         Glide.with(AddActivity.this).load(R.drawable.ic_add_image_grey).circleCrop().into(image_group);
-
         image_group.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(AddActivity.this, R.style.BottomSheetDialogTheme);
                 View bottomSheetView = LayoutInflater.from(getApplicationContext())
-                        .inflate(R.layout.layout_bottom_sheet, (LinearLayout)findViewById(R.id.bottomSheetContainer));
+                        .inflate(R.layout.layout_bottom_sheet, (LinearLayout) findViewById(R.id.bottomSheetContainer));
 
                 bottomSheetView.findViewById(R.id.button_gallery).setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -56,7 +54,6 @@ public class AddActivity extends AppCompatActivity {
                 bottomSheetDialog.show();
             }
         });
-
     }
 
     @Override
@@ -71,10 +68,11 @@ public class AddActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //create tuşuna basıldığındaki işlem
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_add){
+        if (id == R.id.action_add) {
             //eklenecek
         }
         return super.onOptionsItemSelected(item);

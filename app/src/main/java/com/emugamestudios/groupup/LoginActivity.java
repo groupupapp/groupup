@@ -37,7 +37,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         edittext_email_login = findViewById(R.id.edittext_email_login);
         edittext_password_login = findViewById(R.id.edittext_password_login);
         button_login = findViewById(R.id.button_login);
@@ -46,22 +45,17 @@ public class LoginActivity extends AppCompatActivity {
         til_email_login = findViewById(R.id.til_email_login);
         til_password_login = findViewById(R.id.til_password_login);
         progress_login = findViewById(R.id.progress_login);
-
-
         //firebase
         mAuth = FirebaseAuth.getInstance();
-
         //login button
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String email = edittext_email_login.getText().toString().trim();
                 String password = edittext_password_login.getText().toString().trim();
                 til_email_login.setError(null);
                 til_password_login.setError(null);
-
-                //email and password validation
+                //email and password kontrolü
                 if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     til_email_login.setError(getResources().getString(R.string.email_error));
                     edittext_email_login.setFocusable(true);
@@ -71,10 +65,8 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     loginUser(email, password);
                 }
-
             }
         });
-
         //not have account?
         text_not_have_account.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +75,6 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
         //forgot password?
         text_forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,13 +83,11 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
-
+    //giriş yap
     private void loginUser(String email, String password) {
         progress_login.setVisibility(View.VISIBLE);
         button_login.setVisibility(View.INVISIBLE);
-
         //firebase loginuser
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -106,15 +95,12 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-
                             startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
                             finishAffinity();
-
                         } else {
                             progress_login.setVisibility(View.INVISIBLE);
                             button_login.setVisibility(View.VISIBLE);
                         }
-
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -124,7 +110,5 @@ public class LoginActivity extends AppCompatActivity {
                 til_password_login.setError(getResources().getString(R.string.invalid_password));
             }
         });
-
-        }
-
+    }
 }

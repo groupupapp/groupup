@@ -28,6 +28,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -38,7 +40,6 @@ public class RegisterActivity extends AppCompatActivity {
     ProgressBar progress_register;
     private FirebaseAuth mAuth;
     AutoCompleteTextView school_spinner, department_spinner;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +59,6 @@ public class RegisterActivity extends AppCompatActivity {
         progress_register = findViewById(R.id.progress_register);
         department_spinner = findViewById(R.id.department_spinner);
         school_spinner = findViewById(R.id.school_spinner);
-
-
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.universityList, R.layout.spinner_item);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,R.array.department, R.layout.spinner_item);
@@ -83,7 +82,6 @@ public class RegisterActivity extends AppCompatActivity {
                 hideSoftKeyboard(RegisterActivity.this);
             }
         });
-
 
         //firebase
         mAuth = FirebaseAuth.getInstance();
@@ -158,13 +156,12 @@ public class RegisterActivity extends AppCompatActivity {
                             hashMap.put("name", name);
                             hashMap.put("uni", school);
                             hashMap.put("department", department);
-                            hashMap.put("cover", "");
-                            hashMap.put("photo", "https://scontent-vie1-1.cdninstagram.com/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_ohc=MVEG8QTyVK4AX8BUIYS&oh=5d6c495ae50fc88676a5c2db0a401b80&oe=5FB5D50F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2");
+                            hashMap.put("photo", "https://cdn.discordapp.com/attachments/784152625662132235/793974769598201876/44884218_345707102882519_2446069589734326272_n.jpg");
                             //firebase database
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             DatabaseReference reference = database.getReference("Users");
                             reference.child(uid).setValue(hashMap);
-
+                            //change activity to main page
                             startActivity(new Intent(RegisterActivity.this, DashboardActivity.class));
 
                             //close all activities

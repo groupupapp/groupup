@@ -1,5 +1,4 @@
 package com.emugamestudios.groupup;
-
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,10 +30,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
-
 
 public class ProfileFragment extends Fragment {
     RelativeLayout rightBar;
@@ -50,7 +47,6 @@ public class ProfileFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,7 +55,7 @@ public class ProfileFragment extends Fragment {
 
         //firebase
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseUser  = firebaseAuth.getCurrentUser();
+        firebaseUser = firebaseAuth.getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
 
@@ -85,6 +81,7 @@ public class ProfileFragment extends Fragment {
                     Glide.with(ProfileFragment.this).load(photo).circleCrop().into(image_avatar);
                 }
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
@@ -107,12 +104,14 @@ public class ProfileFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_settings:
                 Intent intent = new Intent(getActivity(), OthersActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
-        default:return super.onOptionsItemSelected(item);}
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

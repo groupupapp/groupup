@@ -39,34 +39,28 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
         //firebase
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseUser  = firebaseAuth.getCurrentUser();
+        firebaseUser = firebaseAuth.getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
-
         //bottom navigation
         navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(selectedListener);
-
-        //home fragment (default on start)
+        //home fragment başlangıçta default olarak açılsın
         HomeFragment fragment1 = new HomeFragment();
         FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
         fragmentTransaction1.replace(R.id.content, fragment1, "");
         fragmentTransaction1.commit();
-
-
-
-
     }
 
+    //bottom navigation geçişler
     private BottomNavigationView.OnNavigationItemSelectedListener selectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     //item clicks
-                    switch (item.getItemId()){
+                    switch (item.getItemId()) {
                         case R.id.nav_home:
                             //home fragment
                             ActionBar actionBar1 = getSupportActionBar();
@@ -91,7 +85,6 @@ public class DashboardActivity extends AppCompatActivity {
                             //add activity
                             Intent intent = new Intent(DashboardActivity.this, AddActivity.class);
                             startActivity(intent);
-
                             return false;
 
                         case R.id.nav_notifications:
@@ -118,11 +111,10 @@ public class DashboardActivity extends AppCompatActivity {
                 }
             };
 
-
-    private void checkUserStatus(){
+    //kullanıcıyı kontrol et ve ismini al
+    private void checkUserStatus() {
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        if (user !=null){
-            //get data from database
+        if (user != null) {
             Query query = databaseReference.orderByChild("email").equalTo(firebaseUser.getEmail());
             query.addValueEventListener(new ValueEventListener() {
                 @Override
@@ -137,34 +129,34 @@ public class DashboardActivity extends AppCompatActivity {
                 public void onCancelled(@NonNull DatabaseError error) {
                 }
             });
-        }else{
-            //back to mainactivity
+        } else {
             startActivity(new Intent(DashboardActivity.this, MainActivity.class));
             finish();
         }
     }
 
+    //başlangıçta kullanıcıyı kontrol et
     @Override
     protected void onStart() {
         checkUserStatus();
         super.onStart();
     }
 
+    //menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
+    //logout
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_logout){
+        if (id == R.id.action_logout) {
             firebaseAuth.signOut();
             checkUserStatus();
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }
