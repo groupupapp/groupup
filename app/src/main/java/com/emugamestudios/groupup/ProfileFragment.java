@@ -34,6 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Objects;
 
 public class ProfileFragment extends Fragment {
+    Button edit_profile_button;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
@@ -57,11 +58,20 @@ public class ProfileFragment extends Fragment {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
 
+        edit_profile_button = view.findViewById(R.id.edit_profile_button);
         image_avatar = view.findViewById(R.id.image_avatar);
         text_name = view.findViewById(R.id.text_name);
         text_biography = view.findViewById(R.id.text_biography);
         text_uni = view.findViewById(R.id.text_uni);
         text_department = view.findViewById(R.id.text_department);
+
+        edit_profile_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), EditProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         Query query = databaseReference.orderByChild("email").equalTo(firebaseUser.getEmail());
@@ -79,7 +89,7 @@ public class ProfileFragment extends Fragment {
                     text_department.setText(department);
                     text_uni.setText(uni);
                     text_biography.setText(bio);
-                    Glide.with(ProfileFragment.this).load(photo).circleCrop().into(image_avatar);
+                    Glide.with(getActivity().getApplicationContext()).load(photo).circleCrop().into(image_avatar);
                 }
             }
 
@@ -110,7 +120,6 @@ public class ProfileFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), SettingsActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -38,4 +38,7 @@
     <string name="edit_profile_button_text">Edit Profile</string>
     <string name="sign_out">Sign Out</string>
     <string name="account">Account</string>
+    <string name="title_activity_edit_profile">Edit Profile</string>
+    <string name="edit">EDIT</string>
+    <string name="hint_bio">Bio</string>
 </resources>

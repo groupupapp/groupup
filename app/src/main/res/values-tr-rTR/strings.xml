@@ -38,4 +38,7 @@
     <string name="edit_profile_button_text">Profili Düzenle</string>
     <string name="sign_out">Çıkış yap</string>
     <string name="account">Hesap</string>
+    <string name="title_activity_edit_profile">Profili Düzenle</string>
+    <string name="edit">DÜZENLE</string>
+    <string name="hint_bio">Bio</string>
 </resources>
