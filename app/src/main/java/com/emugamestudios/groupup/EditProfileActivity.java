@@ -28,14 +28,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class EditProfileActivity extends AppCompatActivity {
     EditText edittext_edit_name, edittext_bio;
     TextInputLayout til_edit_name, til_edit_school, til_edit_department, til_edit_bio;
     AutoCompleteTextView edit_school_spinner, edit_department_spinner;
-    ImageView current_pp;
+    CircleImageView current_pp;
     ImageButton button_changephoto;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
@@ -92,7 +95,8 @@ public class EditProfileActivity extends AppCompatActivity {
                     edit_department_spinner.setText(department);
                     edit_school_spinner.setText(uni);
                     edittext_bio.setText(bio);
-                    Glide.with(EditProfileActivity.this).load(photo).circleCrop().into(current_pp);
+                    Picasso.get().load(photo).into(current_pp);
+                    //Glide.with(EditProfileActivity.this).load(photo).circleCrop().into(current_pp);
                 }
             }
 

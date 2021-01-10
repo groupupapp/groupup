@@ -30,8 +30,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileFragment extends Fragment {
     Button edit_profile_button;
@@ -39,7 +42,7 @@ public class ProfileFragment extends Fragment {
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    ImageView image_avatar;
+    CircleImageView image_avatar;
     TextView text_name, text_uni, text_department, text_biography;
 
     public ProfileFragment() {
@@ -89,7 +92,7 @@ public class ProfileFragment extends Fragment {
                     text_department.setText(department);
                     text_uni.setText(uni);
                     text_biography.setText(bio);
-                    Glide.with(getActivity().getApplicationContext()).load(photo).circleCrop().into(image_avatar);
+                    Picasso.get().load(photo).into(image_avatar);
                 }
             }
 
