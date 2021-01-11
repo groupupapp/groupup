@@ -44,6 +44,7 @@ public class EditProfileActivity extends AppCompatActivity {
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    String photo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +89,7 @@ public class EditProfileActivity extends AppCompatActivity {
                     String name = "" + ds.child("name").getValue();
                     String uni = "" + ds.child("uni").getValue();
                     String department = "" + ds.child("department").getValue();
-                    String photo = "" + ds.child("photo").getValue();
+                    photo = "" + ds.child("photo").getValue();
                     String bio = "" + ds.child("bio").getValue();
 
                     edittext_edit_name.setText(name);
@@ -166,7 +167,7 @@ public class EditProfileActivity extends AppCompatActivity {
         hashMap.put("name", name);
         hashMap.put("uni", school);
         hashMap.put("department", department);
-        hashMap.put("photo", "https://cdn.discordapp.com/attachments/784152625662132235/793974769598201876/44884218_345707102882519_2446069589734326272_n.jpg");
+        hashMap.put("photo", photo);
         //firebase database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference reference = database.getReference("Users");
