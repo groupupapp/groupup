@@ -1,4 +1,5 @@
 package com.emugamestudios.groupup;
+
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,22 +38,23 @@ import java.util.Objects;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileFragment extends Fragment {
+    //design
     Button edit_profile_button;
+    CircleImageView image_avatar;
+    TextView text_name, text_uni, text_department, text_biography;
+
+    //firebase
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    CircleImageView image_avatar;
-    TextView text_name, text_uni, text_department, text_biography;
 
     public ProfileFragment() {
-        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         //firebase
@@ -61,6 +63,7 @@ public class ProfileFragment extends Fragment {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
 
+        //design
         edit_profile_button = view.findViewById(R.id.edit_profile_button);
         image_avatar = view.findViewById(R.id.image_avatar);
         text_name = view.findViewById(R.id.text_name);
@@ -68,6 +71,7 @@ public class ProfileFragment extends Fragment {
         text_uni = view.findViewById(R.id.text_uni);
         text_department = view.findViewById(R.id.text_department);
 
+        //edit profile button click
         edit_profile_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,7 +80,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-
+        //user info
         Query query = databaseReference.orderByChild("email").equalTo(firebaseUser.getEmail());
         query.addValueEventListener(new ValueEventListener() {
             @Override

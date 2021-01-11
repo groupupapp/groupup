@@ -97,7 +97,6 @@ public class EditProfileActivity extends AppCompatActivity {
                     edit_school_spinner.setText(uni);
                     edittext_bio.setText(bio);
                     Picasso.get().load(photo).into(current_pp);
-                    //Glide.with(EditProfileActivity.this).load(photo).circleCrop().into(current_pp);
                 }
             }
 
@@ -124,7 +123,7 @@ public class EditProfileActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    //create tuşuna basıldığındaki işlem
+    //edit tuşuna basıldığındaki işlem
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();

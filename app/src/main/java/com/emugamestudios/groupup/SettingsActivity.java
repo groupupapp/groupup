@@ -18,7 +18,10 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class SettingsActivity extends AppCompatActivity {
+    //design
     TextView sign_out_textview;
+
+    //firebase
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
 
@@ -27,17 +30,21 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        //design
         sign_out_textview = findViewById(R.id.sign_out_textview);
+
         //firebase
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
+        //action bar
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle(R.string.title_activity_settings);
         }
 
+        //sign out text on click
         sign_out_textview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +66,7 @@ public class SettingsActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
-    //kullanıcıyı kontrol et
+    //check user
     private void checkUserStatus() {
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if (user == null) {

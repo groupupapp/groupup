@@ -41,4 +41,6 @@
     <string name="title_activity_edit_profile">Edit Profile</string>
     <string name="edit">EDIT</string>
     <string name="hint_bio">Bio</string>
+    <string name="set_group_name_error">Please enter your group name.</string>
+    <string name="set_group_desc_error">Please enter group description.</string>
 </resources>

@@ -3,20 +3,12 @@ package com.emugamestudios.groupup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.PopupMenu;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -28,33 +20,38 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class DashboardActivity extends AppCompatActivity {
+    //firebase
     FirebaseAuth firebaseAuth;
-    BottomNavigationView navigation;
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+
+    BottomNavigationView navigation;
     String yourname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
         //firebase
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
+
         //bottom navigation
         navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(selectedListener);
-        //home fragment başlangıçta default olarak açılsın
+
+        //start home fragment default
         HomeFragment fragment1 = new HomeFragment();
         FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
         fragmentTransaction1.replace(R.id.content, fragment1, "");
         fragmentTransaction1.commit();
     }
 
-    //bottom navigation geçişler
+    //bottom navigation transitions
     private BottomNavigationView.OnNavigationItemSelectedListener selectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -70,7 +67,6 @@ public class DashboardActivity extends AppCompatActivity {
                             fragmentTransaction1.replace(R.id.content, fragment1, "");
                             fragmentTransaction1.commit();
                             return true;
-
                         case R.id.nav_search:
                             //search fragment
                             ActionBar actionBar2 = getSupportActionBar();
@@ -80,13 +76,11 @@ public class DashboardActivity extends AppCompatActivity {
                             fragmentTransaction2.replace(R.id.content, fragment2, "");
                             fragmentTransaction2.commit();
                             return true;
-
                         case R.id.nav_add:
                             //add activity
                             Intent intent = new Intent(DashboardActivity.this, AddActivity.class);
                             startActivity(intent);
                             return false;
-
                         case R.id.nav_notifications:
                             //add fragment
                             ActionBar actionBar4 = getSupportActionBar();
@@ -96,7 +90,6 @@ public class DashboardActivity extends AppCompatActivity {
                             fragmentTransaction4.replace(R.id.content, fragment4, "");
                             fragmentTransaction4.commit();
                             return true;
-
                         case R.id.nav_profile:
                             //profile fragment
                             ActionBar actionBar5 = getSupportActionBar();
@@ -111,7 +104,7 @@ public class DashboardActivity extends AppCompatActivity {
                 }
             };
 
-    //kullanıcıyı kontrol et ve ismini al
+    //check user and get name
     private void checkUserStatus() {
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if (user != null) {
@@ -120,8 +113,7 @@ public class DashboardActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     for (DataSnapshot ds : snapshot.getChildren()) {
-                        String name = "" + ds.child("name").getValue();
-                        yourname = name;
+                        yourname = "" + ds.child("name").getValue();
                     }
                 }
 
@@ -135,28 +127,10 @@ public class DashboardActivity extends AppCompatActivity {
         }
     }
 
-    //başlangıçta kullanıcıyı kontrol et
+    //check user on start
     @Override
     protected void onStart() {
         checkUserStatus();
         super.onStart();
     }
-/*
-    //menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    //logout
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_logout) {
-            firebaseAuth.signOut();
-            checkUserStatus();
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
 }

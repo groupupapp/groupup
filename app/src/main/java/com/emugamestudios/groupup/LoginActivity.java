@@ -26,16 +26,21 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
+    //design
     EditText edittext_email_login, edittext_password_login;
     MaterialButton button_login;
     TextView text_not_have_account, text_forgot_password;
     TextInputLayout til_email_login, til_password_login;
-    private FirebaseAuth mAuth;
     ProgressBar progress_login;
+
+    //firebase
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //design
         setContentView(R.layout.activity_login);
         edittext_email_login = findViewById(R.id.edittext_email_login);
         edittext_password_login = findViewById(R.id.edittext_password_login);
@@ -45,8 +50,10 @@ public class LoginActivity extends AppCompatActivity {
         til_email_login = findViewById(R.id.til_email_login);
         til_password_login = findViewById(R.id.til_password_login);
         progress_login = findViewById(R.id.progress_login);
+
         //firebase
         mAuth = FirebaseAuth.getInstance();
+
         //login button
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +62,8 @@ public class LoginActivity extends AppCompatActivity {
                 String password = edittext_password_login.getText().toString().trim();
                 til_email_login.setError(null);
                 til_password_login.setError(null);
-                //email and password kontrolü
+
+                //email and password check
                 if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     til_email_login.setError(getResources().getString(R.string.email_error));
                     edittext_email_login.setFocusable(true);
@@ -84,11 +92,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    //giriş yap
+
+    //login
     private void loginUser(String email, String password) {
         progress_login.setVisibility(View.VISIBLE);
         button_login.setVisibility(View.INVISIBLE);
-        //firebase loginuser
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override

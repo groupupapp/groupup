@@ -41,4 +41,6 @@
     <string name="title_activity_edit_profile">Profili Düzenle</string>
     <string name="edit">DÜZENLE</string>
     <string name="hint_bio">Bio</string>
+    <string name="set_group_name_error">Lütfen grup isminizi girin.</string>
+    <string name="set_group_desc_error">Lütfen grup açıklamasını girin.</string>
 </resources>

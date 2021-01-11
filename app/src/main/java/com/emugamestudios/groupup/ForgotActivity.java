@@ -19,23 +19,28 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotActivity extends AppCompatActivity {
+    //design
     EditText edittext_email_forgot;
     MaterialButton button_reset;
     ProgressBar progress_reset;
-    private FirebaseAuth mAuth;
     TextInputLayout til_email_forgot;
+
+    //firebase
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot);
 
+        //design
         edittext_email_forgot = findViewById(R.id.edittext_email_forgot);
         button_reset = findViewById(R.id.button_reset);
         progress_reset = findViewById(R.id.progress_reset);
         til_email_forgot = findViewById(R.id.til_email_forgot);
         //firebase
         mAuth = FirebaseAuth.getInstance();
+
         //reset button
         button_reset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,11 +57,10 @@ public class ForgotActivity extends AppCompatActivity {
         });
     }
 
-    //recovery fonksiyonu
+    //password recovery
     private void beginRecovery(String email) {
         progress_reset.setVisibility(View.VISIBLE);
         button_reset.setVisibility(View.INVISIBLE);
-        //send email
         mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

@@ -790,4 +790,8 @@
     <string name="edit_profile_button_text">Edit Profile</string>
     <string name="sign_out">Sign Out</string>
     <string name="account">Account</string>
+    <string name="set_group_name_error">Please enter your group name.</string>
+    <string name="set_group_desc_error">Please enter group description.</string>
+
+
 </resources>
