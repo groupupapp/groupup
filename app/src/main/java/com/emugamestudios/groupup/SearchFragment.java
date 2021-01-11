@@ -27,9 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchFragment extends Fragment {
-    RecyclerView users_recyclerview;
-    AdapterUsers adapterUsers;
-    List<ModelUser> userList;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -39,42 +36,9 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_search, container, false);
-        users_recyclerview = view.findViewById(R.id.users_recyclerview);
-        users_recyclerview.setHasFixedSize(true);
-        users_recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        userList = new ArrayList<>();
-
-        getAllUsers();
         return view;
     }
 
-    private void getAllUsers() {
-        final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    ModelUser modelUser = dataSnapshot.getValue(ModelUser.class);
-
-                    if (!modelUser.getUid().equals(firebaseUser.getUid())){
-                        userList.add(modelUser);
-                    }
-
-                    adapterUsers = new AdapterUsers(getActivity(), userList);
-                    users_recyclerview.setAdapter(adapterUsers);
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,5 +52,4 @@ public class SearchFragment extends Fragment {
         getActivity().getMenuInflater().inflate(R.menu.menu_search, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
-
 }
