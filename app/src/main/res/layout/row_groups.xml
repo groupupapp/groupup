@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.5"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/search_pic"
+            android:src="@drawable/ic_add_image_grey"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/search_pic"
+            android:textColor="@android:color/black"
+            android:id="@+id/search_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Murat Dogan"/>
+        <TextView
+            android:layout_marginTop="-4dp"
+            android:layout_below="@+id/search_name"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/search_pic"
+            android:textColor="@android:color/black"
+            android:id="@+id/search_uni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Murat Dogan"/>
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/search_department"
+            android:id="@+id/hr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#444"></TableRow>
+        <TextView
+            android:textSize="13dp"
+            android:textStyle="italic"
+            android:layout_marginTop="-4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/search_pic"
+            android:layout_below="@+id/search_uni"
+            android:id="@+id/search_department"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="qwewqewqewqe"/>
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/search_pic"
+            android:id="@+id/search_group_img"
+            android:src="@drawable/ic_add_image_grey"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/search_group_img"
+            android:layout_below="@+id/search_pic"
+            android:textColor="@android:color/black"
+            android:id="@+id/search_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ASDASSAD"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/search_group_img"
+            android:layout_below="@+id/search_group_name"
+            android:id="@+id/search_group_desc"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="qwewqewqewqe"/>
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_more_v"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
