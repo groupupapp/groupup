@@ -10,11 +10,12 @@ public class ModelGroup {
     String uni;
     String department;
     String uid;
+    String photo;
     public ModelGroup(){
 
     }
 
-    public ModelGroup(String uid, String groupdId, String groupTitle, String groupDescription, String groupPhoto, String name, String email, String uni, String department) {
+    public ModelGroup(String uid, String groupdId, String groupTitle, String groupDescription, String groupPhoto, String name, String email, String uni, String department, String photo) {
         this.uid = uid;
         this.groupdId = groupdId;
         this.groupTitle = groupTitle;
@@ -24,6 +25,15 @@ public class ModelGroup {
         this.email = email;
         this.uni = uni;
         this.department = department;
+        this.photo = photo;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public String getUid() {

@@ -42,20 +42,10 @@ public class AdapterGroups extends RecyclerView.Adapter<AdapterGroups.MyHolder> 
         String email = groupList.get(position).getEmail();
         String uni = groupList.get(position).getUni();
         String department = groupList.get(position).getDepartment();
+        String photo = groupList.get(position).getPhoto();
 
-
-        if(groupPhoto.equals("noImage")){
-            holder.search_group_img.setVisibility(View.INVISIBLE);
-        }else{
-            try {
-                Picasso.get().load(groupPhoto).into(holder.search_group_img);
-            }catch (Exception e){
-
-            }
-        }
-
-
-
+        Picasso.get().load(groupPhoto).into(holder.search_group_img);
+        Picasso.get().load(photo).into(holder.search_pic);
 
         //set data
         holder.search_group_name.setText(groupTitle);
@@ -71,18 +61,18 @@ public class AdapterGroups extends RecyclerView.Adapter<AdapterGroups.MyHolder> 
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
-        ImageView search_group_img;
+        ImageView search_group_img, search_pic;
         TextView search_group_name,search_group_desc,search_name,search_department,search_uni;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             search_name = itemView.findViewById(R.id.search_name);
             search_uni = itemView.findViewById(R.id.search_uni);
+            search_pic = itemView.findViewById(R.id.search_pic);
             search_department = itemView.findViewById(R.id.search_department);
             search_group_img = itemView.findViewById(R.id.search_group_img);
             search_group_name = itemView.findViewById(R.id.search_group_name);
             search_group_desc = itemView.findViewById(R.id.search_group_desc);
-
         }
     }
 }

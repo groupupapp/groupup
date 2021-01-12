@@ -79,7 +79,6 @@ public class SearchFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getContext(), "Error",Toast.LENGTH_LONG).show();
             }
         });
 

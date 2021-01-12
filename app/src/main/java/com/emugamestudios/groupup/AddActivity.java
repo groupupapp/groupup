@@ -53,7 +53,7 @@ public class AddActivity extends AppCompatActivity {
     //firebase
     FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
-    String name, department, uid, uni, email;
+    String name, department, uid, uni, email, photo;
     Uri image_uri = null;
 
     //permissions
@@ -95,6 +95,7 @@ public class AddActivity extends AppCompatActivity {
                     email = "" + ds.child("email").getValue();
                     department = "" + ds.child("department").getValue();
                     uni = "" + ds.child("uni").getValue();
+                    photo = "" + ds.child("photo").getValue();
                 }
             }
 
@@ -239,6 +240,7 @@ public class AddActivity extends AppCompatActivity {
                                         hashMap.put("groupPhoto", downloadUri);
                                         hashMap.put("department", department);
                                         hashMap.put("uni", uni);
+                                        hashMap.put("photo", photo);
                                         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Groups");
                                         ref.child(timestamp).setValue(hashMap)
                                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -283,6 +285,7 @@ public class AddActivity extends AppCompatActivity {
             hashMap.put("groupPhoto", "https://cdn.discordapp.com/attachments/784152625662132235/798317217926217728/sonlogo.png");
             hashMap.put("department", department);
             hashMap.put("uni", uni);
+            hashMap.put("photo", photo);
             DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Groups");
             ref.child(timestamp).setValue(hashMap)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
