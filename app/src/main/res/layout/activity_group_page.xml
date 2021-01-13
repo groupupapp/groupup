@@ -5,57 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GroupPageActivity">
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="30dp"
-        android:paddingTop="30dp"
-        android:paddingRight="30dp">
+        android:layout_height="wrap_content">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/group_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/group_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/group_image"
-            android:textColor="#fff"
-            android:textSize="20sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="30dp"
+                android:paddingRight="30dp">
 
-        <TextView
-            android:id="@+id/group_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/group_name"
-            android:layout_marginLeft="40dp"
-            android:layout_toRightOf="@+id/group_image"
-            android:textColor="#fff"
-            android:textSize="14sp" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/group_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
 
-        <Button
-            android:id="@+id/join_button"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_below="@+id/group_desc"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="40dp"
-            android:layout_toEndOf="@+id/group_image"
-            android:backgroundTint="#00FFFFFF"
-            android:text="Join"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            app:rippleColor="#F44336"
-            app:strokeColor="#FFFFFF"
-            app:strokeWidth="1dp" />
+                <TextView
+                    android:id="@+id/group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/group_image"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/group_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/group_name"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@+id/group_image"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/join_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/group_desc"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_toEndOf="@+id/group_image"
+                    android:backgroundTint="#00FFFFFF"
+                    android:text="Join"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:rippleColor="#F44336"
+                    app:strokeColor="#FFFFFF"
+                    app:strokeWidth="1dp" />
 
 
 
-    </RelativeLayout>
-
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -28,15 +28,14 @@ public class GroupPageActivity extends AppCompatActivity {
     TextView group_desc;
     String groupName;
     Button join_button;
-
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group_page);
         //actionbar
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Group_name");
+        actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -61,7 +60,7 @@ public class GroupPageActivity extends AppCompatActivity {
                     String gTitle = ""+ds.child("groupTitle").getValue();
                     String gDesc = ""+ds.child("groupDescription").getValue();
                     String gPic = ""+ds.child("groupPhoto").getValue();
-
+                    actionBar.setTitle(gTitle);
                     group_name.setText(gTitle);
                     group_desc.setText(gDesc);
                     //image
