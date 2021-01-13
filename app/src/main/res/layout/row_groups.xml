@@ -10,7 +10,8 @@
     app:cardCornerRadius="5dp"
     app:cardElevation="2dp"
     app:cardUseCompatPadding="true"
-    app:contentPadding="3dp">
+    app:contentPadding="3dp"
+    android:id="@+id/group_cv">
 
     <LinearLayout
         android:layout_width="match_parent"

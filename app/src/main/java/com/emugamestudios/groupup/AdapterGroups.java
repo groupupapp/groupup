@@ -1,13 +1,16 @@
 package com.emugamestudios.groupup;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -32,10 +35,10 @@ public class AdapterGroups extends RecyclerView.Adapter<AdapterGroups.MyHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyHolder holder, final int position) {
         String uid = groupList.get(position).getUid();
         String groupdId = groupList.get(position).getGroupdId();
-        String groupTitle = groupList.get(position).getGroupTitle();
+        final String groupTitle = groupList.get(position).getGroupTitle();
         String groupDescription = groupList.get(position).getGroupDescription();
         String groupPhoto = groupList.get(position).getGroupPhoto();
         String name = groupList.get(position).getName();
@@ -53,6 +56,15 @@ public class AdapterGroups extends RecyclerView.Adapter<AdapterGroups.MyHolder> 
         holder.search_name.setText(name);
         holder.search_department.setText(department);
         holder.search_uni.setText(uni);
+        holder.a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context,GroupPageActivity.class);
+                intent.putExtra("groupName", groupList.get(position).getGroupdId());
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -61,6 +73,7 @@ public class AdapterGroups extends RecyclerView.Adapter<AdapterGroups.MyHolder> 
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
+        CardView a;
         ImageView search_group_img, search_pic;
         TextView search_group_name,search_group_desc,search_name,search_department,search_uni;
 
@@ -73,6 +86,7 @@ public class AdapterGroups extends RecyclerView.Adapter<AdapterGroups.MyHolder> 
             search_group_img = itemView.findViewById(R.id.search_group_img);
             search_group_name = itemView.findViewById(R.id.search_group_name);
             search_group_desc = itemView.findViewById(R.id.search_group_desc);
+            a = itemView.findViewById(R.id.group_cv);
         }
     }
 }

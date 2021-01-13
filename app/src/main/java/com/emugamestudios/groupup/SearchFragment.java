@@ -56,12 +56,13 @@ public class SearchFragment extends Fragment {
         layoutManager.setReverseLayout(true);
 
         recyclerView.setLayoutManager(layoutManager);
-
         list = new ArrayList<>();
 
         loadGroups();
         return view;
     }
+
+
 
     private void loadGroups() {
 
