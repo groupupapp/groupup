@@ -28,7 +28,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
-
+// made by Umit Kadiroglu
 public class RegisterActivity extends AppCompatActivity {
     //design
     EditText edittext_email, edittext_password, edittext_name;

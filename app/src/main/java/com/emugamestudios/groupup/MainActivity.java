@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
-
+// made by Umit Kadiroglu
 public class MainActivity extends AppCompatActivity {
     //design
     MaterialButton button_register_main, button_login_main;

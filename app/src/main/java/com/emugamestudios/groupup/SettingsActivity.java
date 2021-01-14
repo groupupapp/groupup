@@ -16,7 +16,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
+// made by Umit Kadiroglu
 public class SettingsActivity extends AppCompatActivity {
     //design
     TextView sign_out_textview;

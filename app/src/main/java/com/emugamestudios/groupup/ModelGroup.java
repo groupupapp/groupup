@@ -1,5 +1,7 @@
 package com.emugamestudios.groupup;
 
+
+// made by Murat Dogan
 public class ModelGroup {
     String groupdId;
     String groupTitle;

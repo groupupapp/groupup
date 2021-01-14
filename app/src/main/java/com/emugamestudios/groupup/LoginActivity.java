@@ -24,7 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
-
+// made by Umit Kadiroglu
 public class LoginActivity extends AppCompatActivity {
     //design
     EditText edittext_email_login, edittext_password_login;

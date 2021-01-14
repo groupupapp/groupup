@@ -34,6 +34,7 @@ import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+// made by Murat Dogan
 public class EditProfileActivity extends AppCompatActivity {
     EditText edittext_edit_name, edittext_bio;
     TextInputLayout til_edit_name, til_edit_school, til_edit_department, til_edit_bio;

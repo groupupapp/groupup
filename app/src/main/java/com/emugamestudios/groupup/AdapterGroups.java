@@ -17,6 +17,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+
+// made by Murat Dogan
 public class AdapterGroups extends RecyclerView.Adapter<AdapterGroups.MyHolder> {
 
     Context context;

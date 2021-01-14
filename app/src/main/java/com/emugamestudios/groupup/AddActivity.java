@@ -43,6 +43,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
+// made by Umit Kadiroglu
+
 public class AddActivity extends AppCompatActivity {
     //design
     ImageView image_group;

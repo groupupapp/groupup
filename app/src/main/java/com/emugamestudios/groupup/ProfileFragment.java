@@ -36,7 +36,7 @@ import com.squareup.picasso.Picasso;
 import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-
+// made by Murat Dogan
 public class ProfileFragment extends Fragment {
     //design
     Button edit_profile_button;

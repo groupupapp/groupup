@@ -19,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+// made by Umit Kadiroglu
 public class DashboardActivity extends AppCompatActivity {
     //firebase
     FirebaseAuth firebaseAuth;

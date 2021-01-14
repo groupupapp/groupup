@@ -21,6 +21,7 @@ import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+// made by Murat Dogan
 public class GroupPageActivity extends AppCompatActivity {
 
     CircleImageView group_image;
