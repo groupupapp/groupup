@@ -232,6 +232,11 @@ public class AddActivity extends AppCompatActivity {
                                     if (uriTask.isSuccessful()) {
                                         String downloadUri = uriTask.getResult().toString();
                                         System.out.println("isSuccessful");
+                                        HashMap<Object, String> hashMapMembers = new HashMap<>();
+                                        hashMapMembers.put(uid, "Founder");
+                                        DatabaseReference refMembers = FirebaseDatabase.getInstance().getReference("Members");
+                                        refMembers.child(timestamp).setValue(hashMapMembers);
+
                                         HashMap<Object, String> hashMap = new HashMap<>();
                                         hashMap.put("uid", uid);
                                         hashMap.put("name", name);
@@ -277,6 +282,11 @@ public class AddActivity extends AppCompatActivity {
             });
         } else {
             //group with no image
+            HashMap<Object, String> hashMapMembers = new HashMap<>();
+            hashMapMembers.put(uid, "Founder");
+            DatabaseReference refMembers = FirebaseDatabase.getInstance().getReference("Members");
+            refMembers.child(timestamp).setValue(hashMapMembers);
+
             HashMap<Object, String> hashMap = new HashMap<>();
             hashMap.put("uid", uid);
             hashMap.put("name", name);

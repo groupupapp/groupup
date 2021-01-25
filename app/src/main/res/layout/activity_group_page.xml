@@ -55,7 +55,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_toEndOf="@+id/group_image"
                     android:backgroundTint="#00FFFFFF"
-                    android:text="Join"
+                    android:text="@string/Join"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     app:rippleColor="#F44336"

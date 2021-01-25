@@ -34,9 +34,7 @@ import java.util.List;
 // made by Murat Dogan
 
 public class SearchFragment extends Fragment {
-
     FirebaseAuth firebaseAuth;
-
     RecyclerView recyclerView;
     List<ModelGroup> list;
     AdapterGroups adapterGroups;
@@ -64,8 +62,6 @@ public class SearchFragment extends Fragment {
         return view;
     }
 
-
-
     private void loadGroups() {
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Groups");
@@ -77,10 +73,8 @@ public class SearchFragment extends Fragment {
                     ModelGroup modelGroup = ds.getValue(ModelGroup.class);
 
                     list.add(modelGroup);
-
                     adapterGroups = new AdapterGroups(getActivity(), list);
                     recyclerView.setAdapter(adapterGroups);
-
                 }
             }
 
@@ -88,9 +82,7 @@ public class SearchFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
-
     }
-
 
     private void searchGroup(final String searchQuery){
 
@@ -106,7 +98,6 @@ public class SearchFragment extends Fragment {
                             modelGroup.getGroupDescription().toLowerCase().contains(searchQuery.toLowerCase())){
                         list.add(modelGroup);
                     }
-
 
                     adapterGroups = new AdapterGroups(getActivity(), list);
                     recyclerView.setAdapter(adapterGroups);

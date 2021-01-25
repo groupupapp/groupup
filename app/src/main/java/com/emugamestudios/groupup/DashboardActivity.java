@@ -46,6 +46,8 @@ public class DashboardActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(selectedListener);
 
         //start home fragment default
+        ActionBar actionBar1 = getSupportActionBar();
+        actionBar1.setTitle(getResources().getString(R.string.mygroups));
         HomeFragment fragment1 = new HomeFragment();
         FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
         fragmentTransaction1.replace(R.id.content, fragment1, "");
@@ -62,7 +64,7 @@ public class DashboardActivity extends AppCompatActivity {
                         case R.id.nav_home:
                             //home fragment
                             ActionBar actionBar1 = getSupportActionBar();
-                            actionBar1.setTitle(getResources().getString(R.string.app_name));
+                            actionBar1.setTitle(getResources().getString(R.string.mygroups));
                             HomeFragment fragment1 = new HomeFragment();
                             FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                             fragmentTransaction1.replace(R.id.content, fragment1, "");

@@ -14,11 +14,9 @@ public class ModelGroup {
     String uid;
     String photo;
     public ModelGroup(){
-
     }
 
-    public ModelGroup(String uid, String groupdId, String groupTitle, String groupDescription, String groupPhoto, String name, String email, String uni, String department, String photo) {
-        this.uid = uid;
+    public ModelGroup(String groupdId, String groupTitle, String groupDescription, String groupPhoto, String name, String email, String uni, String department, String uid, String photo) {
         this.groupdId = groupdId;
         this.groupTitle = groupTitle;
         this.groupDescription = groupDescription;
@@ -27,23 +25,8 @@ public class ModelGroup {
         this.email = email;
         this.uni = uni;
         this.department = department;
-        this.photo = photo;
-    }
-
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
         this.uid = uid;
+        this.photo = photo;
     }
 
     public String getGroupdId() {
@@ -108,5 +91,21 @@ public class ModelGroup {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

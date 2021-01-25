@@ -43,4 +43,7 @@
     <string name="hint_bio">Bio</string>
     <string name="set_group_name_error">Please enter your group name.</string>
     <string name="set_group_desc_error">Please enter group description.</string>
+    <string name="Join">Join</string>
+    <string name="Joined">Joined</string>
+    <string name="mygroups">My Groups</string>
 </resources>
