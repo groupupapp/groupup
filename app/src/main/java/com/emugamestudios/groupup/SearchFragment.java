@@ -8,7 +8,9 @@ import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,6 +24,7 @@ import android.widget.Toast;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,7 +41,7 @@ public class SearchFragment extends Fragment {
     RecyclerView recyclerView;
     List<ModelGroup> list;
     AdapterGroups adapterGroups;
-
+    SwipeRefreshLayout swipeRefreshLayout;
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -48,7 +51,7 @@ public class SearchFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_search, container, false);
         firebaseAuth = FirebaseAuth.getInstance();
-
+        swipeRefreshLayout = view.findViewById(R.id.swiperefresh);
         recyclerView = view.findViewById(R.id.group_rv);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
@@ -57,7 +60,7 @@ public class SearchFragment extends Fragment {
 
         recyclerView.setLayoutManager(layoutManager);
         list = new ArrayList<>();
-
+        swipeRefreshSearch();
         loadGroups();
         return view;
     }
@@ -65,7 +68,7 @@ public class SearchFragment extends Fragment {
     private void loadGroups() {
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Groups");
-        ref.addValueEventListener(new ValueEventListener() {
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 list.clear();
@@ -148,4 +151,18 @@ public class SearchFragment extends Fragment {
         });
         super.onCreateOptionsMenu(menu, inflater);
     }
-}
+    public void swipeRefreshSearch(){
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipeRefreshLayout.setRefreshing(true);
+                (new Handler()).postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        swipeRefreshLayout.setRefreshing(false);
+                        loadGroups();
+                    }
+                },3000);
+            }
+        });
+    }}
