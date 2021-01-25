@@ -58,37 +58,12 @@ public class HomeFragment extends Fragment {
         uid = user.getUid();
 
 
-
-
-
         loadJoinedGroups();
 
         return view;
     }
 
     private void loadJoinedGroups() {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Groups");
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                list.clear();
-                for (DataSnapshot ds: snapshot.getChildren()){
-                    ModelGroup modelGroup = ds.getValue(ModelGroup.class);
-
-                    list.add(modelGroup);
-                    Log.d("myTag", "This is my message" + list);
-                    adapterGroups = new AdapterGroups(getActivity(), list);
-                    recyclerView.setAdapter(adapterGroups);
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-    }
-
-    @Override
-    public void onStart() {
         DatabaseReference refMembers = FirebaseDatabase.getInstance().getReference("Members");
         refMembers.addValueEventListener(new ValueEventListener() {
             @Override
@@ -98,17 +73,37 @@ public class HomeFragment extends Fragment {
                     if (ds.hasChild(uid)){
                         listMembers.add(ds.getKey());
                     }
-
-                    adapterGroups = new AdapterGroups(getActivity(), list);
-                    recyclerView.setAdapter(adapterGroups);
-
                 }
-            }
+                Log.d("myTag", "This is my message" + listMembers);
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Groups");
+                ref.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        list.clear();
+                        for (DataSnapshot ds: snapshot.getChildren()){
+                            ModelGroup modelGroup = ds.getValue(ModelGroup.class);
 
+                            if (listMembers.contains(modelGroup.getGroupdId())){
+                                list.add(modelGroup);
+                            }
+
+                            adapterGroups = new AdapterGroups(getActivity(), list);
+                            recyclerView.setAdapter(adapterGroups);
+                        }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+                });
+            }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
-        super.onStart();
+
+
+
+
     }
+
 }
